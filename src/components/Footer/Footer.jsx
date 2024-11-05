@@ -23,9 +23,6 @@ const Footer = () => {
   <a href="https://www.instagram.com/the.coding.journey/">
     <FaInstagram className="text-3xl cursor-pointer hover:text-primary hover:scale-105 duration-200" />
   </a>
-  <a href="https://thecodingjourney.com/">
-    <SiReactos className="text-3xl cursor-pointer hover:text-primary hover:scale-105 duration-200" />
-  </a>
   <a href="https://www.youtube.com/@TheCodingJourney">
     <FaYoutube className="text-3xl cursor-pointer hover:text-primary hover:scale-105 duration-200" />
   </a>
