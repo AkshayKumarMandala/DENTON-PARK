@@ -5,15 +5,17 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    chunkSizeWarningLimit: 1000, // Increase chunk size limit to 1000 KB
+    chunkSizeWarningLimit: 1000, 
     rollupOptions: {
       external: [
-        'axios', 'firebase', '@google/generative-ai', '@fortawesome/react-fontawesome', 'react-qr-code'
+        '@fortawesome/react-fontawesome',
+        'react-qr-code', 
+        'axios', 'firebase'
       ],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // Bundle all node_modules into a "vendor" chunk
+            return 'vendor'; 
           }
         }
       }
