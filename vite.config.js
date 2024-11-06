@@ -5,29 +5,6 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    chunkSizeWarningLimit: 1000,
-    rollupOptions: {
-      external: [
-        '@fortawesome/react-fontawesome',
-        'react-qr-code', 
-        'axios',
-        'firebase',
-      ],
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
-        }
-      }
-    }
+    chunkSizeWarningLimit: 1000,  
   },
-  optimizeDeps: {
-    include: [
-      '@fortawesome/react-fontawesome', 
-      'react-qr-code',
-      'axios',
-      'firebase'
-    ],
-  }
 });
