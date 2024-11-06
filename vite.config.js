@@ -12,15 +12,22 @@ export default defineConfig({
         'react-qr-code', 
         'axios',
         'firebase',
-        // Add any other external packages here
       ],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // Bundle all node_modules into a "vendor" chunk
+            return 'vendor';
           }
         }
       }
     }
+  },
+  optimizeDeps: {
+    include: [
+      '@fortawesome/react-fontawesome', 
+      'react-qr-code',
+      'axios',
+      'firebase'
+    ],
   }
 });
