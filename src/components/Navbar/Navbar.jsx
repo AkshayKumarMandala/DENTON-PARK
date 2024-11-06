@@ -1,36 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion";
 
 const NavbarMenu = [
-  {
-    id: 1,
-    title: "Home",
-    path: "/",
-  },
-  {
-    id: 2,
-    title: "About Us",
-    path: "/AboutUs", 
-  },
-  {
-    id: 3,
-    title: "Calendar", 
-    path: "/calendar", 
-  },
-  {
-    id: 4,
-    title: "Contact Us",
-    path: "/contactus",
-  },
-  {
-    id: 5,
-    title: "Reviews",
-    path: "/reviews"
-  }
+  { id: 1, title: "Home", path: "/" },
+  { id: 2, title: "About Us", path: "/AboutUs" },
+  { id: 3, title: "Calendar", path: "/calendar" },
+  { id: 4, title: "Contact Us", path: "/contactus" },
+  { id: 5, title: "Reviews", path: "/reviews" }
 ];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="relative z-20">
       <motion.div
@@ -65,9 +51,37 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="lg:hidden">
-          <IoMdMenu className="text-4xl" />
+          <IoMdMenu className="text-4xl cursor-pointer" onClick={toggleMenu} />
         </div>
       </motion.div>
+      
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-white shadow-lg z-10">
+          <ul className="flex flex-col items-center gap-3 p-5">
+            {NavbarMenu.map((menu) => (
+              <li key={menu.id}>
+                <a
+                  href={menu.path}
+                  className="block py-2 px-3 hover:text-secondary"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {menu.title}
+                </a>
+              </li>
+            ))}
+            <button
+              className="primary-btn mt-2"
+              onClick={() => {
+                window.location.href = "/login";
+                setIsMenuOpen(false);
+              }}
+            >
+              Sign In
+            </button>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
