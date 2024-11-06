@@ -8,8 +8,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000, // Increase chunk size limit to 1000 KB
     rollupOptions: {
       external: [
-        // Add external packages like this
-        'axios', 'firebase', '@google/generative-ai', '@fortawesome/react-fontawesome'
+        'axios', 'firebase', '@google/generative-ai', '@fortawesome/react-fontawesome', 'react-qr-code'
       ],
       output: {
         manualChunks(id) {
