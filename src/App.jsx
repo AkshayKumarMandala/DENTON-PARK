@@ -24,7 +24,7 @@ import AboutUs from "./components/AboutUs";
 import { CartProvider } from "./components/CartContext"; 
 import CartPage from './components/CartPage';
 import ContactUs from './components/ContactUs';
-import PaymentPage from './components/PaymentPage'; 
+
 import AdminRoute from './components/Admin/AdminRoute';
 import Landing from './components/Admin/Landing'
 import AdminVehicles from './components/Admin/AdminVehicles';
@@ -75,7 +75,7 @@ const App = () => {
           <Route path="/cartpage" element={<CartPage />} />
           <Route path="/signagecard" element={<SignageCard />} />
           <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/paymentpage" element={<PaymentPage />} />
+  
           <Route path="/admin-vehicles" element={<AdminVehicles />} />
           <Route path="/admin-wheelchairs" element={<AdminWheelChair />} />
           <Route path="/transactions" element={<AdminTransactions />} />
