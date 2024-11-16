@@ -7,7 +7,7 @@ const NavbarMenu = [
   { id: 2, title: "About Us", path: "/AboutUs" },
   { id: 3, title: "Calendar", path: "/calendar" },
   { id: 4, title: "Contact Us", path: "/contactus" },
-  { id: 5, title: "Reviews", path: "/reviews" }
+  { id: 5, title: "Reviews", path: "/reviews" },
 ];
 
 const Navbar = () => {
@@ -18,14 +18,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-20">
+    <nav className="relative z-20 bg-black text-white">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         className="container py-10 flex justify-between items-center"
       >
         <div>
-          <h1 className="font-bold text-2xl">DENTON Park</h1>
+          <h1 className="font-bold text-2xl text-yellow-400">DENTON Park</h1>
         </div>
         <div className="hidden lg:block">
           <ul className="flex items-center gap-3">
@@ -33,15 +33,15 @@ const Navbar = () => {
               <li key={menu.id}>
                 <a
                   href={menu.path}
-                  className="inline-block py-2 px-3 hover:text-secondary relative group"
+                  className="inline-block py-2 px-3 hover:text-yellow-400 relative group"
                 >
-                  <div className="w-2 h-2 bg-secondary absolute mt-4 rounded-full left-1/2 -translate-x-1/2 top-1/2 bottom-0 group-hover:block hidden"></div>
+                  <div className="w-2 h-2 bg-yellow-400 absolute mt-4 rounded-full left-1/2 -translate-x-1/2 top-1/2 bottom-0 group-hover:block hidden"></div>
                   {menu.title}
                 </a>
               </li>
             ))}
             <button
-              className="primary-btn"
+              className="bg-yellow-400 text-black py-2 px-4 rounded-md hover:bg-yellow-500"
               onClick={() => {
                 window.location.href = "/login";
               }}
@@ -51,19 +51,22 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="lg:hidden">
-          <IoMdMenu className="text-4xl cursor-pointer" onClick={toggleMenu} />
+          <IoMdMenu
+            className="text-4xl cursor-pointer text-white"
+            onClick={toggleMenu}
+          />
         </div>
       </motion.div>
-      
+
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-20 left-0 w-full bg-white shadow-lg z-10">
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-black text-white shadow-lg z-10">
           <ul className="flex flex-col items-center gap-3 p-5">
             {NavbarMenu.map((menu) => (
               <li key={menu.id}>
                 <a
                   href={menu.path}
-                  className="block py-2 px-3 hover:text-secondary"
+                  className="block py-2 px-3 hover:text-yellow-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {menu.title}
@@ -71,7 +74,7 @@ const Navbar = () => {
               </li>
             ))}
             <button
-              className="primary-btn mt-2"
+              className="bg-yellow-400 text-black py-2 px-4 rounded-md mt-2 hover:bg-yellow-500"
               onClick={() => {
                 window.location.href = "/login";
                 setIsMenuOpen(false);

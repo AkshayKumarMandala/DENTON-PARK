@@ -73,166 +73,158 @@ const BookingForm = () => {
     };
 
     return (
-        <div className="container">
-            <form onSubmit={handleSubmit}>
-                <div className="row">
-                    <div className="col-25">
-                        <label htmlFor="fname">Full Name</label>
-                    </div>
-                    <div className="col-75">
-                        <input
-                            type="text"
-                            id="fname"
-                            placeholder="Your name.."
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required
-                        />
-                    </div>
-                </div>
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="fname">Full Name</label>
+            </div>
+            <div className="col-75">
+              <input
+                type="text"
+                id="fname"
+                placeholder="Your name.."
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+          </div>
 
-                <div className="row">
-                    <div className="col-25">
-                        <label htmlFor="appointmentDate">Appointment Date</label>
-                    </div>
-                    <div className="col-75">
-                        <input
-                            type="date"
-                            id="appointmentDate"
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)}
-                            required
-                        />
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="appointmentDate">Appointment Date</label>
+            </div>
+            <div className="col-75">
+              <input
+                type="date"
+                id="appointmentDate"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                required
+              />
+            </div>
+          </div>
 
-                <div className="row">
-                    <div className="col-25">
-                        <label htmlFor="adultCount">Number of Adults</label>
-                    </div>
-                    <div className="col-75">
-                        <input
-                            type="number"
-                            id="adultCount"
-                            value={adultCount}
-                            onChange={(e) => setAdultCount(Number(e.target.value))}
-                            min="0"
-                            required
-                        />
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="adultCount">Number of Adults</label>
+            </div>
+            <div className="col-75">
+              <input
+                type="number"
+                id="adultCount"
+                value={adultCount}
+                onChange={(e) => setAdultCount(Number(e.target.value))}
+                min="0"
+                required
+              />
+            </div>
+          </div>
 
-                <div className="row">
-                    <div className="col-25">
-                        <label htmlFor="childCount">Number of Children</label>
-                    </div>
-                    <div className="col-75">
-                        <input
-                            type="number"
-                            id="childCount"
-                            value={childCount}
-                            onChange={(e) => setChildCount(Number(e.target.value))}
-                            min="0"
-                            required
-                        />
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="childCount">Number of Children</label>
+            </div>
+            <div className="col-75">
+              <input
+                type="number"
+                id="childCount"
+                value={childCount}
+                onChange={(e) => setChildCount(Number(e.target.value))}
+                min="0"
+                required
+              />
+            </div>
+          </div>
 
-                <div className="row">
-                    <div className="col-25">
-                        <label htmlFor="studentCount">Number of Students</label>
-                    </div>
-                    <div className="col-75">
-                        <input
-                            type="number"
-                            id="studentCount"
-                            value={studentCount}
-                            onChange={(e) => setStudentCount(Number(e.target.value))}
-                            min="0"
-                        />
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="studentCount">Number of Students</label>
+            </div>
+            <div className="col-75">
+              <input
+                type="number"
+                id="studentCount"
+                value={studentCount}
+                onChange={(e) => setStudentCount(Number(e.target.value))}
+                min="0"
+              />
+            </div>
+          </div>
 
-                <div className="row">
-                    <div className="col-25">
-                        <label htmlFor="adultBirthdayCount">Adults with Birthday Discount</label>
-                    </div>
-                    <div className="col-75">
-                        <input
-                            type="number"
-                            id="adultBirthdayCount"
-                            value={adultBirthdayCount}
-                            onChange={(e) => setAdultBirthdayCount(Number(e.target.value))}
-                            min="0"
-                        />
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="adultBirthdayCount">
+                Adults with Birthday Discount
+              </label>
+            </div>
+            <div className="col-75">
+              <input
+                type="number"
+                id="adultBirthdayCount"
+                value={adultBirthdayCount}
+                onChange={(e) => setAdultBirthdayCount(Number(e.target.value))}
+                min="0"
+              />
+            </div>
+          </div>
 
-                <div className="row">
-                    <div className="col-25">
-                        <label htmlFor="childBirthdayCount">Children with Birthday Discount</label>
-                    </div>
-                    <div className="col-75">
-                        <input
-                            type="number"
-                            id="childBirthdayCount"
-                            value={childBirthdayCount}
-                            onChange={(e) => setChildBirthdayCount(Number(e.target.value))}
-                            min="0"
-                        />
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="childBirthdayCount">
+                Children with Birthday Discount
+              </label>
+            </div>
+            <div className="col-75">
+              <input
+                type="number"
+                id="childBirthdayCount"
+                value={childBirthdayCount}
+                onChange={(e) => setChildBirthdayCount(Number(e.target.value))}
+                min="0"
+              />
+            </div>
+          </div>
 
-                <div className="row">
-                    <div className="col-25">
-                        <label htmlFor="package">Select Package</label>
-                    </div>
-                    <div className="col-75">
-                        <select
-                            id="package"
-                            value={selectedPackage}
-                            onChange={(e) => setSelectedPackage(e.target.value)}
-                        >
-                            <option value="None">None</option>
-                            <option value="Student ID">Student ID</option>
-                            <option value="Birthday">Birthday</option>
-                        </select>
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="package">Select Package</label>
+            </div>
+            <div className="col-75">
+              <select
+                id="package"
+                value={selectedPackage}
+                onChange={(e) => setSelectedPackage(e.target.value)}
+              >
+                <option value="None">None</option>
+                <option value="Student ID">Student ID</option>
+                <option value="Birthday">Birthday</option>
+              </select>
+            </div>
+          </div>
 
-                <div className="row">
-                    <div className="col-25">
-                        <label>Total Amount</label>
-                    </div>
-                    <div className="col-75">
-                        <input
-                            type="text"
-                            value={`$${totalAmount}`}
-                            readOnly
-                        />
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-25">
+              <label>Total Amount</label>
+            </div>
+            <div className="col-75">
+              <input
+                type="text"
+                value={`$${totalAmount}`}
+                readOnly
+                className="readonly-input" // Added for style customization
+              />
+            </div>
+          </div>
 
-                <div className="row">
-                    <button 
-                        type="submit" 
-                        style={{
-                            padding: "10px 20px",
-                            backgroundColor: "#4CAF50",
-                            color: "white",
-                            fontSize: "16px",
-                            fontWeight: "bold",
-                            border: "none",
-                            borderRadius: "5px",
-                            cursor: "pointer",
-                            marginTop: "15px",
-                        }}
-                    >
-                        Submit
-                    </button>
-                </div>
-            </form>
-        </div>
+          <div className="row">
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     );
 };
 
