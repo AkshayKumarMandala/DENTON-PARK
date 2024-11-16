@@ -25,7 +25,7 @@ const CameraBooking = () => {
           onClick={() => setSelectedOption("rent")}
           className={`option-card cursor-pointer p-6 text-center rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
             selectedOption === "rent"
-              ? "bg-green-100 border-green-800 border-2"
+              ? "bg-green-800 border-green-800 border-2"
               : "bg-white"
           }`}
         >
@@ -42,7 +42,7 @@ const CameraBooking = () => {
           onClick={() => setSelectedOption("photographer")}
           className={`option-card cursor-pointer p-6 text-center rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
             selectedOption === "photographer"
-              ? "bg-green-100 border-green-800 border-2"
+              ? "bg-green-800 border-green-800 border-2"
               : "bg-white"
           }`}
         >

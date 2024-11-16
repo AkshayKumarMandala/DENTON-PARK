@@ -31,7 +31,7 @@ function Restaurant({ handleMenuClick }) {
   return (
     <>
       <div className="flex flex-col items-center">
-        <div className="bg-gray-300 h-[20vh] w-full flex items-center justify-center">
+        <div className="bg-gray-800 h-[20vh] w-full flex items-center justify-center">
           <h1 className="text-gray-600 font-bold text-4xl">
             Restaurants of HAYYIN
           </h1>
@@ -41,7 +41,7 @@ function Restaurant({ handleMenuClick }) {
           {restaurantsdata.map((restaurant) => (
             <div
               key={restaurant.id}
-              className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out w-full sm:w-3/4 md:w-3/4 lg:w-4/5 xl:w-4/5 flex flex-col lg:flex-row items-center"
+              className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-800 ease-in-out w-full sm:w-3/4 md:w-3/4 lg:w-4/5 xl:w-4/5 flex flex-col lg:flex-row items-center"
             >
               <img
                 className="w-full lg:w-1/3 h-48 object-cover m-3"
@@ -61,7 +61,7 @@ function Restaurant({ handleMenuClick }) {
 
               <div className="flex justify-center items-center">
                 <button
-                  className="mt-4 m-2 w-full p-3 rounded-lg bg-blue-800 text-white font-semibold hover:bg-blue-600 transition duration-200 ease-in-out"
+                  className="mt-4 m-2 w-full p-3 rounded-lg bg-blue-800 text-white font-semibold hover:bg-blue-600 transition duration-800 ease-in-out"
                   onClick={() => handleMenuClick(restaurant.id)}
                 >
                   Menu

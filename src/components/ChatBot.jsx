@@ -77,7 +77,7 @@ const Chatbot = () => {
   return (
     <>
       <div className="main flex flex-col">
-        <div className="title justify-center items-center flex h-[15vh] bg-black text-yellow-400">
+        <div className="title justify-center items-center flex h-[15vh] bg-black text-yellow-800">
           <h1 className="text-4xl flex items-center">
             Meet the HAYYIN Chatbot{" "}
             <FaRobot className="mx-5 text-4xl font-extrabold" />{" "}
@@ -85,13 +85,13 @@ const Chatbot = () => {
         </div>
       </div>
 
-      <div className="bg-yellow-400 h-[100vh] flex items-center justify-around">
+      <div className="bg-yellow-800 h-[100vh] flex items-center justify-around">
         <div
           className="app-container "
           style={{ display: "flex", justifyContent: "center", gap: "20px" }}
         >
           <div className="chat-container bg-black ">
-            <div className="chat-history bg-gray-400">
+            <div className="chat-history bg-gray-800">
               {chatHistory.map((chat, index) => (
                 <div key={index} className={`chat-message ${chat.sender}`}>
                   <strong>{chat.sender === "user" ? "You: " : "Bot: "}</strong>
@@ -109,10 +109,10 @@ const Chatbot = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Type your message..."
-                className=" bg-slate-900 text-gray-400"
+                className=" bg-slate-900 text-gray-800"
               />
               <button
-                className="bg-yellow-400 text-black tex"
+                className="bg-yellow-800 text-black tex"
                 onClick={handleSendMessage}
               >
                 Send
@@ -121,12 +121,12 @@ const Chatbot = () => {
           </div>
 
           <div className="faq-container bg-black">
-            <div className="faq-header text-gray-300">
+            <div className="faq-header text-gray-800">
               Frequently Asked Questions
             </div>
             <ul className="faq-list  h-[80%]">
               {Object.keys(faqs).map((faq, index) => (
-                <li key={index} className="faq-item bg-slate-900 text-gray-400">
+                <li key={index} className="faq-item bg-slate-900 text-gray-800">
                   {faq.charAt(0).toUpperCase() + faq.slice(1)}
                 </li>
               ))}

@@ -2,7 +2,7 @@ import React from "react";
 
 const SignageCard = ({ signage }) => {
   return (
-    <div className="signage-card border border-gray-300 rounded-lg p-4 mb-4 md:w-[20vw] w-full bg-white">
+    <div className="signage-card border border-gray-800 rounded-lg p-4 mb-4 md:w-[20vw] w-full bg-white">
       <img
         src={signage.src}
         alt={signage.name}

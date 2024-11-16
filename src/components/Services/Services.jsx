@@ -94,7 +94,7 @@ const Services = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] rounded-2xl flex flex-col items-center justify-center p-4 py-7 hover:bg-white hover:scale-110 duration-300 hover:shadow-2xl h-full" // Set height to full
+                className="bg-[#f4f4f4] rounded-2xl flex flex-col items-center justify-center p-4 py-7 hover:bg-white hover:scale-110 duration-800 hover:shadow-2xl h-full" // Set height to full
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h1 className="text-lg font-semibold text-center px-3 flex-grow"> {/* Added flex-grow */}

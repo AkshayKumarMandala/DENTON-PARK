@@ -15,7 +15,7 @@ const AboutUs = () => {
         </div>
 
         {/* Landing Section */}
-        <div className="landing flex flex-wrap justify-center my-10 bg-slate-300">
+        <div className="landing flex flex-wrap justify-center my-10 bg-slate-800">
           <div className="gallery-item w-full md:w-1/2 p-4 transition-transform transform hover:scale-105">
             <img
               src="https://cdn.pixabay.com/photo/2019/10/09/15/43/star-flyer-4537668_1280.jpg"
@@ -42,7 +42,7 @@ const AboutUs = () => {
         </div>
 
         {/* Family Section */}
-        <div className="family flex flex-wrap justify-center mb-10 bg-slate-400">
+        <div className="family flex flex-wrap justify-center mb-10 bg-slate-800">
           <div className="description w-full md:w-1/2 p-4 flex items-center justify-center">
             <p className="text-gray-800">
               Family-Friendly Facilities: We prioritize comfort and convenience,
@@ -63,7 +63,7 @@ const AboutUs = () => {
         </div>
 
         {/* Children Section */}
-        <div className="children flex flex-wrap justify-center mb-10 bg-slate-300">
+        <div className="children flex flex-wrap justify-center mb-10 bg-slate-800">
           <div className="gallery-item w-full md:w-1/2 p-4 transition-transform transform hover:scale-105">
             <img
               src="https://media.istockphoto.com/id/1294060074/photo/portrait-of-little-girl-eating-cotton-candy.jpg?s=612x612&w=0&k=20&c=4jcPua9aY3JDA5TS-GiAOiQSu_S8jlUyI53DEO9fSUs="
@@ -84,7 +84,7 @@ const AboutUs = () => {
         </div>
 
         {/* Motto Section */}
-        <div className="motto flex flex-wrap justify-center mb-10 p-5 bg-gradient-to-r from-yellow-300 to-yellow-200 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <div className="motto flex flex-wrap justify-center mb-10 p-5 bg-gradient-to-r from-yellow-800 to-yellow-800 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <section className="mission-section w-full md:w-1/2 p-4 flex flex-col justify-center items-start">
             <h2 className="text-3xl font-bold text-black mb-2">Our Mission</h2>
             <p className="text-gray-800">
@@ -100,7 +100,7 @@ const AboutUs = () => {
                 (value) => (
                   <li
                     key={value}
-                    className="hover:text-yellow-800 transition-colors duration-300"
+                    className="hover:text-yellow-800 transition-colors duration-800"
                   >
                     {value}
                   </li>

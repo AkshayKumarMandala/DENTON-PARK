@@ -44,7 +44,7 @@ function CartPage() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex bg-gray-300 h-[20vh] w-full items-center justify-center">
+      <div className="flex bg-gray-800 h-[20vh] w-full items-center justify-center">
         <h1 className="m-5 text-black font-bold text-4xl">Your Cart</h1>
       </div>
       {cartItems.length === 0 ? (
@@ -70,7 +70,7 @@ function CartPage() {
                   <p className="text-gray-600">Duration: {item.duration}</p>
                 )}
                 <button
-                  className="mt-4 w-full p-3 rounded-lg bg-red-800 text-white font-semibold hover:bg-red-600 transition duration-200 ease-in-out"
+                  className="mt-4 w-full p-3 rounded-lg bg-red-800 text-white font-semibold hover:bg-red-600 transition duration-800 ease-in-out"
                   onClick={() => removeFromCart(item.id)}
                 >
                   Remove from Cart
@@ -80,12 +80,12 @@ function CartPage() {
           ))}
         </div>
       )}
-      <div className="mt-5 p-5 bg-gray-100 rounded-lg w-full">
+      <div className="mt-5 p-5 bg-gray-800 rounded-lg w-full">
         <h2 className="font-bold text-lg">
           Total Amount: ${isNaN(totalAmount) ? "0.00" : totalAmount}
         </h2>
         <button
-          className="mt-4 w-full p-3 rounded-lg bg-green-800 text-white font-semibold hover:bg-green-600 transition duration-200 ease-in-out"
+          className="mt-4 w-full p-3 rounded-lg bg-green-800 text-white font-semibold hover:bg-green-600 transition duration-800 ease-in-out"
           onClick={handlePaymentClick}
         >
           Proceed to Payment
@@ -95,7 +95,7 @@ function CartPage() {
             <QRCode value={`Total Amount: $${totalAmount}`} size={128} />
             <p className="text-gray-600 mt-2">Scan to pay</p>
             <button
-              className="mt-4 w-full p-3 rounded-lg bg-blue-800 text-white font-semibold hover:bg-blue-600 transition duration-200 ease-in-out"
+              className="mt-4 w-full p-3 rounded-lg bg-blue-800 text-white font-semibold hover:bg-blue-600 transition duration-800 ease-in-out"
               onClick={handleGetTransactionId}
             >
               Get Transaction ID

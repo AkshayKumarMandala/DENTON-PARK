@@ -206,10 +206,11 @@ const BookingForm = () => {
 
           <div className="row">
             <div className="col-25">
-              <label>Total Amount</label>
+              <label htmlFor="totalAmount">Total Amount</label>
             </div>
             <div className="col-75">
               <input
+                id="totalAmount"
                 type="text"
                 value={`$${totalAmount}`}
                 readOnly
@@ -219,7 +220,7 @@ const BookingForm = () => {
           </div>
 
           <div className="row">
-            <button type="submit" className="submit-btn">
+            <button type="submit" className="submit-btn bg-green-900">
               Submit
             </button>
           </div>

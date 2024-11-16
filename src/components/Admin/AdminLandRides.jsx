@@ -186,7 +186,7 @@ const AdminLandRides = () => {
         {rides.map((ride) => (
           <div
             key={ride.id}
-            className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out"
+            className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-800 ease-in-out"
           >
             <img
               className="w-full h-48 object-cover"
@@ -200,13 +200,13 @@ const AdminLandRides = () => {
                 {/* Edit and Delete buttons */}
                 <button
                   onClick={() => handleEditRide(ride)}
-                  className="w-1/2 p-2 rounded-lg bg-yellow-800 text-white font-semibold hover:bg-yellow-600 transition duration-200 ease-in-out mr-1"
+                  className="w-1/2 p-2 rounded-lg bg-yellow-800 text-white font-semibold hover:bg-yellow-600 transition duration-800 ease-in-out mr-1"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDeleteRide(ride.id)}
-                  className="w-1/2 p-2 rounded-lg bg-red-800 text-white font-semibold hover:bg-red-600 transition duration-200 ease-in-out ml-1"
+                  className="w-1/2 p-2 rounded-lg bg-red-800 text-white font-semibold hover:bg-red-600 transition duration-800 ease-in-out ml-1"
                 >
                   Delete
                 </button>

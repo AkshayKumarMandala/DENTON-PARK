@@ -56,7 +56,7 @@ const Hero = () => {
                 aria-label="Book Entry Tickets"
               >
                 Book Entry Tickets
-                <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-300" />
+                <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-800" />
               </button>
             </motion.div>
           </div>

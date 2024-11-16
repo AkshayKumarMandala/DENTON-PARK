@@ -35,13 +35,13 @@ function Landing() {
     return (
         <div className='h-screen'>
             <div className="flex flex-col">
-                <div className="top flex text-4xl items-center justify-center bg-yellow-400 w-full h-[15vh]">ADMIN PORTAL</div>
+                <div className="top flex text-4xl items-center justify-center bg-yellow-800 w-full h-[15vh]">ADMIN PORTAL</div>
                 <div className='maincomponent w-full h-[85vh] flex '>
                     <div className="left w-[25%] h-full flex flex-col overflow-y-auto overflow-x-hidden">
                         {ServicesData.map((service) => (
                             <div
                                 key={service.id}
-                                className="bg-black text-yellow-300 border border-yellow-300 flex flex-col items-center justify-center p-2 cursor-pointer"
+                                className="bg-black text-yellow-800 border border-yellow-800 flex flex-col items-center justify-center p-2 cursor-pointer"
                                 onClick={() => navigate(service.path)}
                             >
                                 <div className="text-2xl mb-4">{service.icon}</div>

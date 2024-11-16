@@ -30,13 +30,13 @@ function AdminFeedback() {
           <thead>
             <tr>
               {/* Use darker background for better contrast */}
-              <th className="py-3 px-6 bg-gray-300 font-semibold text-black text-left">
+              <th className="py-3 px-6 bg-gray-800 font-semibold text-black text-left">
                 Email
               </th>
-              <th className="py-3 px-6 bg-gray-300 font-semibold text-black text-left">
+              <th className="py-3 px-6 bg-gray-800 font-semibold text-black text-left">
                 Feedback
               </th>
-              <th className="py-3 px-6 bg-gray-300 font-semibold text-black text-left">
+              <th className="py-3 px-6 bg-gray-800 font-semibold text-black text-left">
                 Timestamp
               </th>
             </tr>
@@ -52,13 +52,13 @@ function AdminFeedback() {
               feedbackData.map((feedback) => (
                 <tr key={feedback.id}>
                   {/* Use darker text color for rows */}
-                  <td className="py-3 px-6 border-b border-gray-200 text-gray-800">
+                  <td className="py-3 px-6 border-b border-gray-800 text-gray-800">
                     {feedback.email}
                   </td>
-                  <td className="py-3 px-6 border-b border-gray-200 text-gray-800">
+                  <td className="py-3 px-6 border-b border-gray-800 text-gray-800">
                     {feedback.feedback}
                   </td>
-                  <td className="py-3 px-6 border-b border-gray-200 text-gray-800">
+                  <td className="py-3 px-6 border-b border-gray-800 text-gray-800">
                     {feedback.timestamp?.toDate().toLocaleString()}
                   </td>
                 </tr>

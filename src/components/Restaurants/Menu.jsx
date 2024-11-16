@@ -65,7 +65,7 @@ const Menu = () => {
     return dishes.map((dish) => (
       <div
         key={dish.id}
-        className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out"
+        className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-800 ease-in-out"
       >
         <img
           className="w-full h-48 object-cover"
@@ -77,7 +77,7 @@ const Menu = () => {
           <p className="text-gray-600">Price: ${dish.price}</p>
           <button
             onClick={() => handleAddToCart(dish)}
-            className="mt-2 w-full py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-green-400 to-green-600 hover:from-green-800 hover:to-green-700 transition duration-200 ease-in-out"
+            className="mt-2 w-full py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-green-800 to-green-600 hover:from-green-800 hover:to-green-700 transition duration-800 ease-in-out"
           >
             Add to Cart
           </button>
@@ -104,7 +104,7 @@ const Menu = () => {
           className={`p-2 rounded ${
             selectedRestaurant === "oliveGreen"
               ? "bg-green-800 text-white"
-              : "bg-gray-200"
+              : "bg-gray-800"
           }`}
         >
           Olive & Green
@@ -114,7 +114,7 @@ const Menu = () => {
           className={`p-2 rounded ${
             selectedRestaurant === "tasteOfIndia"
               ? "bg-green-800 text-white"
-              : "bg-gray-200"
+              : "bg-gray-800"
           }`}
         >
           Taste of India
@@ -124,7 +124,7 @@ const Menu = () => {
           className={`p-2 rounded ${
             selectedRestaurant === "phothin"
               ? "bg-green-800 text-white"
-              : "bg-gray-200"
+              : "bg-gray-800"
           }`}
         >
           Phothin

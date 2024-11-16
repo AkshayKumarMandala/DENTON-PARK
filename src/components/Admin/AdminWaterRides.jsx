@@ -175,7 +175,7 @@ const AdminWaterRides = () => {
         {rides.map((ride) => (
           <div
             key={ride.id}
-            className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out"
+            className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-800 ease-in-out"
           >
             <img
               className="w-full h-48 object-cover"
@@ -188,13 +188,13 @@ const AdminWaterRides = () => {
               <div className="flex justify-between mt-4">
                 <button
                   onClick={() => handleEditRide(ride)}
-                  className="w-1/2 p-2 rounded-lg bg-yellow-700 text-white font-semibold hover:bg-yellow-800 transition duration-200 ease-in-out mr-1"
+                  className="w-1/2 p-2 rounded-lg bg-yellow-700 text-white font-semibold hover:bg-yellow-800 transition duration-800 ease-in-out mr-1"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDeleteRide(ride.id)}
-                  className="w-1/2 p-2 rounded-lg bg-red-700 text-white font-semibold hover:bg-red-800 transition duration-200 ease-in-out"
+                  className="w-1/2 p-2 rounded-lg bg-red-700 text-white font-semibold hover:bg-red-800 transition duration-800 ease-in-out"
                 >
                   Delete
                 </button>

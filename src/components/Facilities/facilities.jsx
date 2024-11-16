@@ -85,9 +85,9 @@ const Facilities = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="bg-black rounded-2xl flex flex-col items-center justify-center p-4 py-7 hover:bg-gray-800 hover:scale-110 transition-transform duration-300 hover:shadow-2xl h-full"
+                className="bg-black rounded-2xl flex flex-col items-center justify-center p-4 py-7 hover:bg-gray-800 hover:scale-110 transition-transform duration-800 hover:shadow-2xl h-full"
               >
-                <div className="text-4xl text-yellow-400 mb-4">
+                <div className="text-4xl text-yellow-800 mb-4">
                   {facility.icon}
                 </div>
                 <img
@@ -95,7 +95,7 @@ const Facilities = () => {
                   alt={facility.title}
                   className="w-full h-32 object-contain rounded-md mb-4"
                 />
-                <h1 className="text-lg font-semibold text-yellow-400 text-center px-3 flex-grow">
+                <h1 className="text-lg font-semibold text-yellow-800 text-center px-3 flex-grow">
                   {facility.title}
                 </h1>
                 <p className="text-center text-white mt-2">

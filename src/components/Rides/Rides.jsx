@@ -79,15 +79,15 @@ const Rides = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="bg-black rounded-2xl flex flex-col items-center justify-between p-6 py-8 hover:bg-gray-900 hover:scale-105 duration-300 hover:shadow-lg transform h-full"
+            className="bg-black rounded-2xl flex flex-col items-center justify-between p-6 py-8 hover:bg-gray-900 hover:scale-105 duration-800 hover:shadow-lg transform h-full"
           >
-            <div className="text-5xl text-yellow-400 mb-6">{service.icon}</div>
+            <div className="text-5xl text-yellow-800 mb-6">{service.icon}</div>
             <img src={service.src} className="shadow-lg rounded-xl mb-6" alt={service.title} />
             
-            <h1 className="text-lg text-yellow-400 font-semibold text-center mb-2">
+            <h1 className="text-lg text-yellow-800 font-semibold text-center mb-2">
               {service.title}
             </h1>
-            <p className="text-center text-gray-300">{service.description}</p>
+            <p className="text-center text-gray-800">{service.description}</p>
           </motion.div>
         </Link>
       ))}

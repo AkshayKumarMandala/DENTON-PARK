@@ -40,24 +40,24 @@ function ContactUs() {
       </h2>
 
       <div className="flex flex-col md:flex-row justify-around items-start w-full space-y-8 md:space-y-0 md:space-x-8 px-5 bg-opacity-70 bg-black p-5 rounded-lg">
-        <div className="flex flex-col items-center space-y-3 text-yellow-300">
+        <div className="flex flex-col items-center space-y-3 text-yellow-800">
           <h3 className="text-xl font-semibold">Connect with Us</h3>
           <div className="flex space-x-4 text-2xl">
-            <FaFacebook className="hover:text-blue-800 transition duration-200" />
-            <FaTwitter className="hover:text-blue-300 transition duration-200" />
-            <FaInstagram className="hover:text-pink-800 transition duration-200" />
-            <FaLinkedin className="hover:text-blue-700 transition duration-200" />
+            <FaFacebook className="hover:text-blue-800 transition duration-800" />
+            <FaTwitter className="hover:text-blue-800 transition duration-800" />
+            <FaInstagram className="hover:text-pink-800 transition duration-800" />
+            <FaLinkedin className="hover:text-blue-700 transition duration-800" />
           </div>
         </div>
 
-        <div className="text-center md:text-left text-yellow-200">
+        <div className="text-center md:text-left text-yellow-800">
           <h3 className="text-xl font-semibold">Customer Support</h3>
           <p className="mt-2">📞 Phone: +1 (999) 887-665</p>
           <p>📧 Email: dentonpark@gmail.com</p>
           <p>🕒 Working Hours: Mon - Fri, 9am - 6pm</p>
         </div>
 
-        <div className="text-center md:text-left text-yellow-200">
+        <div className="text-center md:text-left text-yellow-800">
           <h3 className="text-xl font-semibold">Our Address</h3>
           <p className="mt-2">123 Main Street,</p>
           <p>Houston, Texas, 77001</p>
@@ -66,7 +66,7 @@ function ContactUs() {
       </div>
 
       <div className="feedback mt-10 w-full max-w-2xl bg-white bg-opacity-80 shadow-lg rounded-lg pb-4">
-        <div className="bg-yellow-200 mb-2 p-2 flex items-center justify-center rounded-t-lg">
+        <div className="bg-yellow-800 mb-2 p-2 flex items-center justify-center rounded-t-lg">
           <h3 className="text-2xl font-semibold text-black mb-4">
             Submit your Feedback or Raise your Complaint
           </h3>

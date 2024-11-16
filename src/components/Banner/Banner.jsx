@@ -39,7 +39,7 @@ const Banner = () => {
                 initial="initial"
                 whileInView={"animate"}
                 viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
+                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-800 hover:shadow-2xl"
               >
                 <GiWaterPolo className="text-2xl" />
                 <p className="text-lg">60+ Rides</p>
@@ -49,7 +49,7 @@ const Banner = () => {
                 initial="initial"
                 whileInView={"animate"}
                 viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
+                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-800 hover:shadow-2xl"
               >
                 <GrUserExpert className="text-2xl" />
                 <p className="text-lg">PWD Friendly</p>
@@ -59,7 +59,7 @@ const Banner = () => {
                 initial="initial"
                 whileInView={"animate"}
                 viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
+                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-800 hover:shadow-2xl"
               >
                 <MdOutlineAccessTime className="text-2xl" />
                 <p className="text-lg">8 Hours per day</p>

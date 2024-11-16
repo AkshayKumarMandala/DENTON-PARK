@@ -28,7 +28,7 @@ const WaterRides = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex bg-gray-300 h-[20vh] w-full items-center justify-center">
+      <div className="flex bg-gray-800 h-[20vh] w-full items-center justify-center">
         <h1 className="m-5 text-black font-bold text-4xl">
           Book Water Rides Now
         </h1>
@@ -37,7 +37,7 @@ const WaterRides = () => {
         {rides.map((ride) => (
           <div
             key={ride.id}
-            className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out"
+            className="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-800 ease-in-out"
           >
             <img
               className="w-full h-48 object-cover"

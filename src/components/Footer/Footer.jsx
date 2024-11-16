@@ -27,21 +27,21 @@ const Footer = () => {
                 href="https://chat.whatsapp.com/FQSKgJ5f1eIAhlyF5sVym0"
                 className="text-black hover:text-primary"
               >
-                <FaWhatsapp className="text-3xl cursor-pointer hover:scale-105 duration-200" />{" "}
+                <FaWhatsapp className="text-3xl cursor-pointer hover:scale-105 duration-800" />{" "}
                 Whatsapp
               </a>
               <a
                 href="https://www.instagram.com/the.coding.journey/"
                 className="text-black hover:text-primary"
               >
-                <FaInstagram className="text-3xl cursor-pointer hover:scale-105 duration-200" />{" "}
+                <FaInstagram className="text-3xl cursor-pointer hover:scale-105 duration-800" />{" "}
                 Instagram
               </a>
               <a
                 href="https://www.youtube.com/@TheCodingJourney"
                 className="text-black hover:text-primary"
               >
-                <FaYoutube className="text-3xl cursor-pointer hover:scale-105 duration-200" />{" "}
+                <FaYoutube className="text-3xl cursor-pointer hover:scale-105 duration-800" />{" "}
                 Youtube
               </a>
             </div>

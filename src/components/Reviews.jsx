@@ -59,7 +59,7 @@ function Reviews() {
         </div>
 
         <div className="feedback mt-5 w-full bg-white bg-opacity-80 shadow-lg rounded-lg pb-1">
-          <div className="bg-yellow-200 mb-2 p-2 flex items-center justify-center rounded-t-lg">
+          <div className="bg-yellow-800 mb-2 p-2 flex items-center justify-center rounded-t-lg">
             <h3 className="text-2xl font-semibold text-black">
               Write your Review
             </h3>

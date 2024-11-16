@@ -74,13 +74,13 @@ const Signage = () => {
       {/* <Users collectionName="signage" heading={"Clear Signage"} /> */}
 
       <div
-        className="searchbar w-full h-[10vh] bg-gray-200 flex items-center justify-center mb-4"
+        className="searchbar w-full h-[10vh] bg-gray-800 flex items-center justify-center mb-4"
         style={{
           backgroundImage:
             "url('https://img.freepik.com/premium-photo/illustrated-map-amusement-park-with-rollercoasters-water-rides-other-attractions_14117-1055205.jpg')",
         }}
       >
-        <div className="bar h-[50%] bg-gray-100 flex items-center px-3 rounded-lg shadow-md">
+        <div className="bar h-[50%] bg-gray-800 flex items-center px-3 rounded-lg shadow-md">
           <label
             htmlFor="signage-search"
             className="block text-sm font-medium text-gray-700"
@@ -100,7 +100,7 @@ const Signage = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row">
-        <div className="left w-full lg:w-1/2 p-4 overflow-y-auto h-[60vh] lg:h-[90vh] bg-white rounded-lg shadow-md scrollbar-thin scrollbar-thumb-gray-300">
+        <div className="left w-full lg:w-1/2 p-4 overflow-y-auto h-[60vh] lg:h-[90vh] bg-white rounded-lg shadow-md scrollbar-thin scrollbar-thumb-gray-800">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {filteredSignages.map((signage) => (
               <SignageCard key={signage.id} signage={signage} />

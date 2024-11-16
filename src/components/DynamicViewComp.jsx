@@ -77,7 +77,7 @@ const DynamicView = ({ heading, collectionName, pricing = false }) => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] rounded-2xl flex p-4 py-7 hover:bg-white hover:scale-105 duration-300 hover:shadow-2xl"
+                className="bg-[#f4f4f4] rounded-2xl flex p-4 py-7 hover:bg-white hover:scale-105 duration-800 hover:shadow-2xl"
               >
                 <div className="flex items-start">
                   <div className="flex flex-col flex-shrink-0 mr-4">
