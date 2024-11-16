@@ -78,7 +78,7 @@ const AdminTasteOfIndia = () => {
     <div className="p-5">
       <h1 className="text-2xl font-bold mb-4">Admin - Taste of India Dishes</h1>
 
-      {error && <div className="text-red-500 mb-4">{error}</div>}
+      {error && <div className="text-red-800 mb-4">{error}</div>}
 
       <form onSubmit={handleAddOrUpdateDish} className="mb-4">
         <label htmlFor="src" className="block mb-1">
@@ -125,7 +125,7 @@ const AdminTasteOfIndia = () => {
 
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          className="px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-600 transition"
         >
           {editDishId ? "Update Dish" : "Add Dish"}
         </button>
@@ -149,13 +149,13 @@ const AdminTasteOfIndia = () => {
               <div className="flex justify-between mt-4">
                 <button
                   onClick={() => handleEditDish(dish)}
-                  className="w-1/2 p-2 rounded-lg bg-yellow-500 text-white font-semibold hover:bg-yellow-600 transition duration-200 ease-in-out mr-1"
+                  className="w-1/2 p-2 rounded-lg bg-yellow-800 text-white font-semibold hover:bg-yellow-600 transition duration-200 ease-in-out mr-1"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDeleteDish(dish.id)}
-                  className="w-1/2 p-2 rounded-lg bg-red-500 text-white font-semibold hover:bg-red-600 transition duration-200 ease-in-out"
+                  className="w-1/2 p-2 rounded-lg bg-red-800 text-white font-semibold hover:bg-red-600 transition duration-200 ease-in-out"
                 >
                   Delete
                 </button>

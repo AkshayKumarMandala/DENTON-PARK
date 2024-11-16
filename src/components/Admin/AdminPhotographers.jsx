@@ -180,7 +180,7 @@ const AdminPhotographers = () => {
                     ) : (
                       <button
                         style={{
-                          backgroundColor: "#28a745",
+                          backgroundColor: "#1e7e34",
                           color: "white",
                           border: "none",
                           borderRadius: "5px",

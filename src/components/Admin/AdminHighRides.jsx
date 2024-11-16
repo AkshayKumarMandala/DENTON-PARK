@@ -147,7 +147,7 @@ const AdminHighRides = () => {
 
       <button
         onClick={handleAddInitialHighRides}
-        className="mb-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+        className="mb-4 px-4 py-2 bg-green-800 text-white rounded hover:bg-green-600 transition"
       >
         Add Initial High Rides
       </button>
@@ -201,7 +201,7 @@ const AdminHighRides = () => {
 
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          className="px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-600 transition"
         >
           {editRideId ? "Update Ride" : "Add Ride"}
         </button>
@@ -218,13 +218,13 @@ const AdminHighRides = () => {
             <div>
               <button
                 onClick={() => handleEditRide(ride)}
-                className="mr-2 px-4 py-2 bg-yellow-500 text-white rounded"
+                className="mr-2 px-4 py-2 bg-yellow-800 text-white rounded"
               >
                 Edit
               </button>
               <button
                 onClick={() => handleDeleteRide(ride.id)}
-                className="px-4 py-2 bg-red-500 text-white rounded"
+                className="px-4 py-2 bg-red-800 text-white rounded"
               >
                 Delete
               </button>

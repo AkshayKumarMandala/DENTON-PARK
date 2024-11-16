@@ -19,7 +19,7 @@ const Banner = () => {
             src={aPark}
             alt=""
             className="w-[350px] md:max-w-[450px] object-cover drop-shadow"
-            style={{borderRadius:"50%"}}
+            style={{ borderRadius: "50%" }}
           />
         </div>
         <div className="flex flex-col justify-center">
@@ -29,9 +29,9 @@ const Banner = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold !leading-snug"
+              className="text-3xl md:text-4xl font-bold !leading-snug text-black"
             >
-               Experience Thrilling Rides and Endless Fun!
+              Experience Thrilling Rides and Endless Fun!
             </motion.h1>
             <div className="flex flex-col gap-6">
               <motion.div

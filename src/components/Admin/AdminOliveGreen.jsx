@@ -87,7 +87,7 @@ const AdminOliveGreen = () => {
       <h1 className="text-2xl font-bold mb-4">Admin - Olive & Green Dishes</h1>
 
       {message && (
-        <div className="p-2 mb-4 bg-green-500 text-white">{message}</div>
+        <div className="p-2 mb-4 bg-green-800 text-white">{message}</div>
       )}
 
       <form onSubmit={handleAddOrUpdateDish} className="mb-4">
@@ -140,7 +140,7 @@ const AdminOliveGreen = () => {
         <button
           type="submit"
           disabled={loading}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          className="px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-900 transition"
         >
           {loading ? "Processing..." : editDishId ? "Update Dish" : "Add Dish"}
         </button>
@@ -164,17 +164,17 @@ const AdminOliveGreen = () => {
               />
               <div className="p-5">
                 <h1 className="font-bold text-xl text-gray-800">{dish.name}</h1>
-                <p className="text-gray-600">Price: {dish.price}</p>
+                <p className="text-gray-900">Price: {dish.price}</p>
                 <div className="flex justify-between mt-4">
                   <button
                     onClick={() => handleEditDish(dish)}
-                    className="w-1/2 p-2 rounded-lg bg-yellow-500 text-white font-semibold hover:bg-yellow-600 transition duration-200 ease-in-out mr-1"
+                    className="w-1/2 p-2 rounded-lg bg-yellow-800 text-white font-semibold hover:bg-yellow-900 transition duration-200 ease-in-out mr-1"
                   >
                     Edit
                   </button>
                   <button
                     onClick={() => handleDeleteDish(dish.id)}
-                    className="w-1/2 p-2 rounded-lg bg-red-500 text-white font-semibold hover:bg-red-600 transition duration-200 ease-in-out"
+                    className="w-1/2 p-2 rounded-lg bg-red-800 text-white font-semibold hover:bg-red-900 transition duration-200 ease-in-out"
                   >
                     Delete
                   </button>

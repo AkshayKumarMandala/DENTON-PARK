@@ -54,7 +54,7 @@ const ScreenReader = () => {
       />
       <button
         onClick={handleSpeak}
-        className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
+        className="w-full bg-blue-800 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
       >
         Read Aloud
       </button>

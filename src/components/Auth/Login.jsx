@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, db } from "../../firebase"; 
+import { auth, db } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import DynamicForm from "../DynamicForm/dynamicForm";
@@ -16,15 +16,17 @@ const Login = ({ setUser, setLoggedInThroughLoginPage }) => {
 
   const login = async (email, password) => {
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const { user } = userCredential;
 
-      
-      const userDoc = await getDoc(doc(db, "users", user.uid)); 
+      const userDoc = await getDoc(doc(db, "users", user.uid));
       const userData = userDoc.data();
 
       if (userData) {
-        
         setUser({
           name: userData.name || user.email,
           role: userData.role,
@@ -50,14 +52,13 @@ const Login = ({ setUser, setLoggedInThroughLoginPage }) => {
       const trimmedPassword = password.trim();
       await login(trimmedEmail, trimmedPassword);
 
-      
       const currentUser = await getDoc(doc(db, "users", auth.currentUser.uid));
       const role = currentUser.data().role;
 
-      if (role === 'admin') {
-        navigate("/admin"); 
+      if (role === "admin") {
+        navigate("/admin");
       } else {
-        navigate("/"); 
+        navigate("/");
       }
     } catch (err) {
       setError("Failed to log in: " + err.message);
@@ -83,7 +84,14 @@ const Login = ({ setUser, setLoggedInThroughLoginPage }) => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto", padding: "2rem", textAlign: "center" }}>
+    <div
+      style={{
+        maxWidth: "400px",
+        margin: "auto",
+        padding: "2rem",
+        textAlign: "center",
+      }}
+    >
       <h2>Login</h2>
       <form style={{ display: "grid", gap: "2vh" }} onSubmit={handleLogin}>
         <DynamicForm
@@ -99,12 +107,24 @@ const Login = ({ setUser, setLoggedInThroughLoginPage }) => {
           placeholders={placeholders}
         />
 
-        <button style={{ placeSelf: "center", padding: "0.5rem 2rem" }} className="primary-btn" type="submit">
+        <button
+          style={{ placeSelf: "center", padding: "0.5rem 2rem" }}
+          className="primary-btn bg-black text-white"
+          type="submit"
+        >
           Log In
         </button>
 
-        <p>Don't have an account? 
-          <Link to="register"><button style={{ color: "#007BFF", textDecoration: "underline" }}>Register</button></Link>
+        <p>
+          Don't have an account?
+          <Link to="register">
+            <button
+              style={{ textDecoration: "underline" }}
+              className="ms-2 color-black"
+            >
+              Register
+            </button>
+          </Link>
         </p>
 
         {error && <p style={{ color: "red" }}>{error}</p>}

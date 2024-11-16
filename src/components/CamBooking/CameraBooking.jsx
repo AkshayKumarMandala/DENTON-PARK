@@ -25,11 +25,11 @@ const CameraBooking = () => {
           onClick={() => setSelectedOption("rent")}
           className={`option-card cursor-pointer p-6 text-center rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
             selectedOption === "rent"
-              ? "bg-green-100 border-green-500 border-2"
+              ? "bg-green-100 border-green-800 border-2"
               : "bg-white"
           }`}
         >
-          <em className="fas fa-camera text-4xl text-green-500 mb-4"></em>
+          <em className="fas fa-camera text-4xl text-green-800 mb-4"></em>
           <h2 className="text-2xl font-semibold mb-2">Rent a Camera</h2>
           <p className="text-gray-600 mb-4">
             Access high-quality cameras for your special events or travel needs.
@@ -42,11 +42,11 @@ const CameraBooking = () => {
           onClick={() => setSelectedOption("photographer")}
           className={`option-card cursor-pointer p-6 text-center rounded-lg shadow-lg transition-transform transform hover:scale-105 ${
             selectedOption === "photographer"
-              ? "bg-green-100 border-green-500 border-2"
+              ? "bg-green-100 border-green-800 border-2"
               : "bg-white"
           }`}
         >
-          <em className="fas fa-user-camera text-4xl text-green-500 mb-4"></em>
+          <em className="fas fa-user-camera text-4xl text-green-800 mb-4"></em>
           <h2 className="text-2xl font-semibold mb-2">Book a Photographer</h2>
           <p className="text-gray-600 mb-4">
             Hire a professional photographer to capture your memorable moments.

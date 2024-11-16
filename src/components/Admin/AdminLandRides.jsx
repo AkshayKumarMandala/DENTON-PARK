@@ -116,7 +116,7 @@ const AdminLandRides = () => {
 
       <button
         onClick={handleAddInitialRides}
-        className="mb-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+        className="mb-4 px-4 py-2 bg-green-800 text-white rounded hover:bg-green-600 transition"
       >
         Add Initial Rides
       </button>
@@ -174,7 +174,7 @@ const AdminLandRides = () => {
         {/* Submit button */}
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          className="px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-600 transition"
         >
           {editRideId ? "Update Ride" : "Add Ride"}
         </button>
@@ -200,13 +200,13 @@ const AdminLandRides = () => {
                 {/* Edit and Delete buttons */}
                 <button
                   onClick={() => handleEditRide(ride)}
-                  className="w-1/2 p-2 rounded-lg bg-yellow-500 text-white font-semibold hover:bg-yellow-600 transition duration-200 ease-in-out mr-1"
+                  className="w-1/2 p-2 rounded-lg bg-yellow-800 text-white font-semibold hover:bg-yellow-600 transition duration-200 ease-in-out mr-1"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDeleteRide(ride.id)}
-                  className="w-1/2 p-2 rounded-lg bg-red-500 text-white font-semibold hover:bg-red-600 transition duration-200 ease-in-out ml-1"
+                  className="w-1/2 p-2 rounded-lg bg-red-800 text-white font-semibold hover:bg-red-600 transition duration-200 ease-in-out ml-1"
                 >
                   Delete
                 </button>

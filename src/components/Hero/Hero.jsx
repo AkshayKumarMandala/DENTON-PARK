@@ -40,8 +40,7 @@ const Hero = () => {
               className="text-3xl lg:text-5xl font-bold !leading-snug"
             >
               Unleash Adventure & Fun Your{" "}
-              <span className="text-secondary">Ultimate</span> Amusement
-              Destination
+              <span className="text-black">Ultimate</span> Amusement Destination
             </motion.h1>
             <motion.div
               variants={FadeUp(0.8)}
@@ -53,7 +52,7 @@ const Hero = () => {
                 onClick={() => {
                   window.location.href = "/bookings";
                 }}
-                className="primary-btn flex items-center gap-2 group"
+                className="primary-btn flex items-center gap-2 group bg-black text-white"
                 aria-label="Book Entry Tickets"
               >
                 Book Entry Tickets
@@ -78,7 +77,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
             src={Blob}
             alt="Abstract background element with fluid design"
-            className="absolute -bottom-32 w-[800px] md:w-[1500px] z-[1] hidden md:block"
+            className="absolute -bottom-32 w-[800px] md:w-[1800px] z-[1] hidden md:block"
           />
         </div>
       </div>

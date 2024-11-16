@@ -20,10 +20,19 @@ const Register = () => {
     setError("");
     try {
       const { email, password, name } = formValues;
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const user = userCredential.user;
 
-      const adminEmails = ["mans22@gmail.com", "emily1234@gmail.com", "june245@gmail.com", "akshaykumarmandala06@gmail.com"];
+      const adminEmails = [
+        "mans22@gmail.com",
+        "emily1234@gmail.com",
+        "june245@gmail.com",
+        "akshaykumarmandala06@gmail.com",
+      ];
       const role = adminEmails.includes(email) ? "admin" : "user";
       await setDoc(doc(db, "users", user.uid), {
         uid: user.uid,
@@ -39,7 +48,6 @@ const Register = () => {
       } else {
         navigate("/");
       }
-
     } catch (err) {
       setError("Failed to register: " + err.message);
     }
@@ -76,7 +84,16 @@ const Register = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div style={{ maxWidth: "400px", margin: "auto", padding: "2rem", textAlign: "center", backgroundColor: "rgba(255, 255, 255, 0.6)", borderRadius: "8px" }}>
+      <div
+        style={{
+          maxWidth: "400px",
+          margin: "auto",
+          padding: "2rem",
+          textAlign: "center",
+          backgroundColor: "rgba(255, 255, 255, 0.6)",
+          borderRadius: "8px",
+        }}
+      >
         <h2>Register</h2>
         <form style={{ display: "grid", gap: "2vh" }} onSubmit={handleRegister}>
           <DynamicForm
@@ -92,7 +109,11 @@ const Register = () => {
             }}
             placeholders={placeholders}
           />
-          <button style={{ placeSelf: "end" }} className="primary-btn" type="submit">
+          <button
+            style={{ placeSelf: "end" }}
+            className="primary-btn bg-black color-white"
+            type="submit"
+          >
             Register
           </button>
           {error && <p style={{ color: "red" }}>{error}</p>}

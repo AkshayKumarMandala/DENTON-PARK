@@ -25,7 +25,7 @@ function Dining() {
           <Menu menuItems={restaurantMenu} />
           <button
             onClick={handleBackClick}
-            className="p-2 bg-blue-500 text-white rounded my-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="p-2 bg-blue-800 text-white rounded my-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
             aria-label="Back to restaurant list"
           >
             Check Out Other Restaurants

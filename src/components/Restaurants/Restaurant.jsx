@@ -61,7 +61,7 @@ function Restaurant({ handleMenuClick }) {
 
               <div className="flex justify-center items-center">
                 <button
-                  className="mt-4 m-2 w-full p-3 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600 transition duration-200 ease-in-out"
+                  className="mt-4 m-2 w-full p-3 rounded-lg bg-blue-800 text-white font-semibold hover:bg-blue-600 transition duration-200 ease-in-out"
                   onClick={() => handleMenuClick(restaurant.id)}
                 >
                   Menu

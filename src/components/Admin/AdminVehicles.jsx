@@ -42,7 +42,7 @@ const AdminVehicles = () => {
         duration: "1 hour",
       },
       {
-        src: "https://5.imimg.com/data5/SELLER/Default/2023/7/329417836/QA/LY/BK/11567184/14-seater-electric-sightseeing-bus-500x500.png",
+        src: "https://5.imimg.com/data5/SELLER/Default/2023/7/329417836/QA/LY/BK/11567184/14-seater-electric-sightseeing-bus-800x800.png",
         title: "Shuttle",
         price: "100$",
         duration: "1 hour",
@@ -116,7 +116,7 @@ const AdminVehicles = () => {
 
       <button
         onClick={handleAddInitialVehicles}
-        className="mb-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+        className="mb-4 px-4 py-2 bg-green-800 text-white rounded hover:bg-green-900 transition"
       >
         Add Initial Vehicles
       </button>
@@ -184,7 +184,7 @@ const AdminVehicles = () => {
 
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          className="px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-900 transition"
         >
           {editVehicleId ? "Update Vehicle" : "Add Vehicle"}
         </button>
@@ -211,13 +211,13 @@ const AdminVehicles = () => {
               <div className="flex justify-between mt-4">
                 <button
                   onClick={() => handleEditVehicle(vehicle)}
-                  className="w-1/2 p-2 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition duration-200 ease-in-out mr-1"
+                  className="w-1/2 p-2 rounded-lg bg-yellow-800 text-white font-semibold hover:bg-yellow-900 transition duration-200 ease-in-out mr-1"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDeleteVehicle(vehicle.id)}
-                  className="w-1/2 p-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 transition duration-200 ease-in-out"
+                  className="w-1/2 p-2 rounded-lg bg-red-800 text-white font-semibold hover:bg-red-900 transition duration-200 ease-in-out"
                 >
                   Delete
                 </button>

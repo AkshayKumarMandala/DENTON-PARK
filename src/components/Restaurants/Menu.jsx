@@ -77,7 +77,7 @@ const Menu = () => {
           <p className="text-gray-600">Price: ${dish.price}</p>
           <button
             onClick={() => handleAddToCart(dish)}
-            className="mt-2 w-full py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 transition duration-200 ease-in-out"
+            className="mt-2 w-full py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-green-400 to-green-600 hover:from-green-800 hover:to-green-700 transition duration-200 ease-in-out"
           >
             Add to Cart
           </button>
@@ -91,7 +91,7 @@ const Menu = () => {
   }
 
   if (error) {
-    return <div className="text-center text-xl text-red-500">{error}</div>;
+    return <div className="text-center text-xl text-red-800">{error}</div>;
   }
 
   return (
@@ -103,7 +103,7 @@ const Menu = () => {
           onClick={() => handleRestaurantChange("oliveGreen")}
           className={`p-2 rounded ${
             selectedRestaurant === "oliveGreen"
-              ? "bg-green-500 text-white"
+              ? "bg-green-800 text-white"
               : "bg-gray-200"
           }`}
         >
@@ -113,7 +113,7 @@ const Menu = () => {
           onClick={() => handleRestaurantChange("tasteOfIndia")}
           className={`p-2 rounded ${
             selectedRestaurant === "tasteOfIndia"
-              ? "bg-green-500 text-white"
+              ? "bg-green-800 text-white"
               : "bg-gray-200"
           }`}
         >
@@ -123,7 +123,7 @@ const Menu = () => {
           onClick={() => handleRestaurantChange("phothin")}
           className={`p-2 rounded ${
             selectedRestaurant === "phothin"
-              ? "bg-green-500 text-white"
+              ? "bg-green-800 text-white"
               : "bg-gray-200"
           }`}
         >

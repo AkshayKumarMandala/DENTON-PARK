@@ -74,7 +74,7 @@ const WheelChair = () => {
               <p className="text-gray-600">Price: {wheelchair.price}</p>
               <p className="text-gray-600">Duration: {wheelchair.duration}</p>
               <button
-                className="mt-4 w-full p-3 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600 transition duration-200 ease-in-out"
+                className="mt-4 w-full p-3 rounded-lg bg-blue-800 text-white font-semibold hover:bg-blue-600 transition duration-200 ease-in-out"
                 onClick={() => handleAddToCart(wheelchair)}
               >
                 Add to Cart

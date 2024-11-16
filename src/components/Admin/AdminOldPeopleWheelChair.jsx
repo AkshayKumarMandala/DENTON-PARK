@@ -55,7 +55,7 @@ const AdminOldPeopleWheelChair = () => {
           duration: "1 day",
         },
         {
-          src: "https://5.imimg.com/data5/SELLER/Default/2024/2/391391565/OB/JG/XI/2118790/front-wheel-drive-power-chair-500x500.jpg",
+          src: "https://5.imimg.com/data5/SELLER/Default/2024/2/391391565/OB/JG/XI/2118790/front-wheel-drive-power-chair-800x800.jpg",
           title: "Automatic Wheel Chair",
           price: "90$",
           duration: "1 hour",
@@ -151,13 +151,13 @@ const AdminOldPeopleWheelChair = () => {
 
       <button
         onClick={handleAddInitialWheelchairs}
-        className="mb-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+        className="mb-4 px-4 py-2 bg-green-800 text-white rounded hover:bg-green-600 transition"
       >
         Add Initial Wheel Chairs
       </button>
 
       {loading && <p>Loading...</p>}
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className="text-red-800">{error}</p>}
 
       <form onSubmit={handleAddOrUpdateWheelchair} className="mb-4">
         <h2 className="text-xl mb-2">
@@ -233,7 +233,7 @@ const AdminOldPeopleWheelChair = () => {
 
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          className="px-4 py-2 bg-blue-800 text-white rounded hover:bg-blue-600 transition"
         >
           {editWheelchairId ? "Update Wheel Chair" : "Add Wheel Chair"}
         </button>
@@ -249,13 +249,13 @@ const AdminOldPeopleWheelChair = () => {
             <div>
               <button
                 onClick={() => handleEditWheelchair(wheelchair)}
-                className="mr-2 text-blue-500"
+                className="mr-2 text-blue-800"
               >
                 Edit
               </button>
               <button
                 onClick={() => handleDeleteWheelchair(wheelchair.id)}
-                className="text-red-500"
+                className="text-red-800"
               >
                 Delete
               </button>

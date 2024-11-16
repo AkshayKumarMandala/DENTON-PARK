@@ -32,12 +32,12 @@ const DealCalendar = () => {
       color: "pink",
       text: "Free Cotton Candy for every ticket!",
     },
-    5: { icon: faSatellite, color: "blue", text: "Free Roller Coaster Ride!" },
+    5: { icon: faSatellite, color: "pink", text: "Free Roller Coaster Ride!" },
     12: { icon: faCandyCane, color: "pink", text: "Cotton Candy Day!" },
     18: { icon: faStar, color: "yellow", text: "Star Attraction Discount!" },
     25: {
       icon: faSatellite,
-      color: "blue",
+      color: "pink",
       text: "Special Event: Roller Coaster Festival!",
     },
   };
@@ -72,10 +72,12 @@ const DealCalendar = () => {
       <div className="calendar-header">
         <button onClick={handlePreviousMonth} className="nav-button">
           <FontAwesomeIcon icon={faChevronLeft} />
+          <span className="hidden">Left</span>
         </button>
         <h2>{currentMonth.name}</h2>
         <button onClick={handleNextMonth} className="nav-button">
           <FontAwesomeIcon icon={faChevronRight} />
+          <span className="hidden">Right</span>
         </button>
       </div>
       <div className="deal-details">

@@ -43,9 +43,9 @@ function ContactUs() {
         <div className="flex flex-col items-center space-y-3 text-yellow-300">
           <h3 className="text-xl font-semibold">Connect with Us</h3>
           <div className="flex space-x-4 text-2xl">
-            <FaFacebook className="hover:text-blue-500 transition duration-200" />
+            <FaFacebook className="hover:text-blue-800 transition duration-200" />
             <FaTwitter className="hover:text-blue-300 transition duration-200" />
-            <FaInstagram className="hover:text-pink-500 transition duration-200" />
+            <FaInstagram className="hover:text-pink-800 transition duration-200" />
             <FaLinkedin className="hover:text-blue-700 transition duration-200" />
           </div>
         </div>
