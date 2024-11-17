@@ -45,7 +45,7 @@ function CartPage() {
   return (
     <div className="flex flex-col items-center">
       <div className="flex bg-gray-800 h-[20vh] w-full items-center justify-center">
-        <h1 className="m-5 text-black font-bold text-4xl">Your Cart</h1>
+        <h1 className="m-5 text-white font-bold text-4xl">Your Cart</h1>
       </div>
       {cartItems.length === 0 ? (
         <p className="text-gray-600">Your cart is empty.</p>
@@ -81,7 +81,7 @@ function CartPage() {
         </div>
       )}
       <div className="mt-5 p-5 bg-gray-800 rounded-lg w-full">
-        <h2 className="font-bold text-lg">
+        <h2 className="font-bold text-lg text-white">
           Total Amount: ${isNaN(totalAmount) ? "0.00" : totalAmount}
         </h2>
         <button

@@ -30,13 +30,13 @@ function AdminFeedback() {
           <thead>
             <tr>
               {/* Use darker background for better contrast */}
-              <th className="py-3 px-6 bg-gray-800 font-semibold text-black text-left">
+              <th className="py-3 px-6 bg-gray-800 font-semibold text-white text-left">
                 Email
               </th>
-              <th className="py-3 px-6 bg-gray-800 font-semibold text-black text-left">
+              <th className="py-3 px-6 bg-gray-800 font-semibold text-white text-left">
                 Feedback
               </th>
-              <th className="py-3 px-6 bg-gray-800 font-semibold text-black text-left">
+              <th className="py-3 px-6 bg-gray-800 font-semibold text-white text-left">
                 Timestamp
               </th>
             </tr>

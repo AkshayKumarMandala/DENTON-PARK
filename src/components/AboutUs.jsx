@@ -22,17 +22,19 @@ const AboutUs = () => {
               alt="Thrilling Rides"
               className="rounded-lg shadow-lg"
             />
-            <h3 className="text-xl font-semibold mt-2">Thrilling Rides</h3>
+            <h3 className="text-xl font-semibold mt-2 text-white">
+              Thrilling Rides
+            </h3>
           </div>
 
           <div className="description w-full md:w-1/2 p-4 flex flex-col justify-center items-center">
             <div className="flex flex-col">
-              <p className="text-gray-800 mb-2">
+              <p className="text-white mb-2">
                 Dive into adventure at HAYYIN, where excitement meets fun for
                 all ages! Experience thrilling rides like the Sky Whirlwind and
                 family-friendly attractions that create lasting memories.
               </p>
-              <p className="text-gray-800">
+              <p className="text-white">
                 Join us for special events, parades, and live entertainment that
                 bring the magic of HAYYIN to life. Explore our ticket options
                 and plan your visit today—unforgettable adventures await!
@@ -44,7 +46,7 @@ const AboutUs = () => {
         {/* Family Section */}
         <div className="family flex flex-wrap justify-center mb-10 bg-slate-800">
           <div className="description w-full md:w-1/2 p-4 flex items-center justify-center">
-            <p className="text-gray-800">
+            <p className="text-white">
               Family-Friendly Facilities: We prioritize comfort and convenience,
               offering a variety of family-friendly facilities. Our spacious
               picnic areas, clean restrooms, and nursing rooms ensure that every
@@ -58,7 +60,9 @@ const AboutUs = () => {
               alt="Family Fun"
               className="rounded-lg shadow-lg"
             />
-            <h3 className="text-xl font-semibold mt-2">Family Fun</h3>
+            <h3 className="text-xl font-semibold mt-2 text-white">
+              Family Fun
+            </h3>
           </div>
         </div>
 
@@ -70,11 +74,13 @@ const AboutUs = () => {
               alt="Delicious Treats"
               className="rounded-full shadow-lg"
             />
-            <h3 className="text-xl font-semibold mt-2">Delicious Treats</h3>
+            <h3 className="text-xl font-semibold mt-2 text-white">
+              Delicious Treats
+            </h3>
           </div>
 
           <div className="description w-full md:w-1/2 p-4 flex items-center justify-center">
-            <p className="text-gray-800">
+            <p className="text-white">
               Dining and Shopping: Satisfy your cravings with a wide array of
               dining options, from quick bites to full-service restaurants.
               Enjoy classic theme park favorites like cotton candy and funnel
@@ -87,7 +93,7 @@ const AboutUs = () => {
         <div className="motto flex flex-wrap justify-center mb-10 p-5 bg-gradient-to-r from-yellow-800 to-yellow-800 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <section className="mission-section w-full md:w-1/2 p-4 flex flex-col justify-center items-start">
             <h2 className="text-3xl font-bold text-black mb-2">Our Mission</h2>
-            <p className="text-gray-800">
+            <p className="text-white">
               To provide a safe and joyful environment for families to create
               unforgettable memories together.
             </p>

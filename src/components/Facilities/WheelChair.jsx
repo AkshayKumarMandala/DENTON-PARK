@@ -39,7 +39,7 @@ const WheelChair = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex bg-gray-800 h-[20vh] w-full items-center justify-center">
-        <h1 className="m-5 text-gray-600 font-bold text-4xl">
+        <h1 className="m-5 text-white font-bold text-4xl">
           Book Wheelchairs Now
         </h1>
       </div>

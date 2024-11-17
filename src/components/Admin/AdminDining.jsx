@@ -8,19 +8,19 @@ const AdminDining = () => {
       <div className="space-y-4">
         <Link
           to="/adminolivegreen"
-          className="inline-block px-4 py-2 bg-yellow-900 text-black rounded hover:bg-yellow-700 transition"
+          className="inline-block px-4 py-2 bg-yellow-900 text-white rounded hover:bg-yellow-700 transition"
         >
           Manage Olive & Green
         </Link>
         <Link
           to="/admintasteofindia"
-          className="inline-block px-4 py-2 bg-orange-900 text-black rounded hover:bg-orange-700 transition"
+          className="inline-block px-4 py-2 bg-orange-900 text-white rounded hover:bg-orange-700 transition"
         >
           Manage Taste of India
         </Link>
         <Link
           to="/adminphothin"
-          className="inline-block px-4 py-2 bg-yellow-900 text-black rounded hover:bg-yellow-700 transition"
+          className="inline-block px-4 py-2 bg-yellow-900 text-white rounded hover:bg-yellow-700 transition"
         >
           Manage Phothin
         </Link>

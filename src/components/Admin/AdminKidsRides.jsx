@@ -109,7 +109,7 @@ const AdminKidsRides = () => {
 
       <button
         onClick={handleAddInitialRides}
-        className="mb-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+        className="mb-4 px-4 py-2 bg-green-800 text-white rounded hover:bg-green-700 transition"
       >
         Add Initial Rides
       </button>
@@ -186,7 +186,7 @@ const AdminKidsRides = () => {
               <div className="flex justify-between mt-4">
                 <button
                   onClick={() => handleEditRide(ride)}
-                  className="w-1/2 p-2 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition duration-800 ease-in-out mr-1"
+                  className="w-1/2 p-2 rounded-lg bg-yellow-800 text-white font-semibold hover:bg-yellow-700 transition duration-800 ease-in-out mr-1"
                 >
                   Edit
                 </button>

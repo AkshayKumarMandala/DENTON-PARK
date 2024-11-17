@@ -100,7 +100,7 @@ const Chatbot = () => {
               ))}
             </div>
             <div className="chat-input bg-black">
-              <label htmlFor="chatMessage" className="sr-only">
+              <label htmlFor="chatMessage" className="text-white">
                 Type your message
               </label>
               <input
@@ -109,10 +109,10 @@ const Chatbot = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Type your message..."
-                className=" bg-slate-900 text-gray-800"
+                className="bg-slate-900 text-white" // Changed text-gray-800 to text-white for better contrast
               />
               <button
-                className="bg-yellow-800 text-black tex"
+                className="bg-black text-white" // This should already have good contrast
                 onClick={handleSendMessage}
               >
                 Send
@@ -121,12 +121,12 @@ const Chatbot = () => {
           </div>
 
           <div className="faq-container bg-black">
-            <div className="faq-header text-gray-800">
+            <div className="faq-header text-white">
               Frequently Asked Questions
             </div>
             <ul className="faq-list  h-[80%]">
               {Object.keys(faqs).map((faq, index) => (
-                <li key={index} className="faq-item bg-slate-900 text-gray-800">
+                <li key={index} className="faq-item bg-slate-900 text-white">
                   {faq.charAt(0).toUpperCase() + faq.slice(1)}
                 </li>
               ))}

@@ -40,13 +40,13 @@ function AdminTransactions() {
       <table className="min-w-full bg-white border border-gray-800 rounded-lg shadow-md overflow-hidden">
         <thead>
           <tr>
-            <th className="py-2 px-4 bg-gray-800 text-gray-800 font-semibold text-left">
+            <th className="py-2 px-4 bg-gray-800 text-white font-semibold text-left">
               Transaction ID
             </th>
-            <th className="py-2 px-4 bg-gray-800 text-gray-800 font-semibold text-left">
+            <th className="py-2 px-4 bg-gray-800 text-white font-semibold text-left">
               Amount
             </th>
-            <th className="py-2 px-4 bg-gray-800 text-gray-800 font-semibold text-left">
+            <th className="py-2 px-4 bg-gray-800 text-white font-semibold text-left">
               Date & Time
             </th>
           </tr>

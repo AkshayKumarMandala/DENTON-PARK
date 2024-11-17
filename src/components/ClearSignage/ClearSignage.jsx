@@ -81,12 +81,15 @@ const Signage = () => {
         }}
       >
         <div className="bar h-[50%] bg-gray-800 flex items-center px-3 rounded-lg shadow-md">
-          <label
-            htmlFor="signage-search"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Search for signage
-          </label>
+          <div className="bg-gray-900 p-4">
+            <label
+              htmlFor="signage-search"
+              className="block text-sm font-medium text-gray-100"
+            >
+              Search for signage
+            </label>
+          </div>
+
           <input
             id="signage-search"
             type="text"

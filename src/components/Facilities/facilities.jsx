@@ -95,9 +95,10 @@ const Facilities = () => {
                   alt={facility.title}
                   className="w-full h-32 object-contain rounded-md mb-4"
                 />
-                <h1 className="text-lg font-semibold text-yellow-800 text-center px-3 flex-grow">
+                <h1 className="text-lg font-semibold text-yellow-300 text-center px-3 flex-grow">
                   {facility.title}
                 </h1>
+
                 <p className="text-center text-white mt-2">
                   {facility.description}
                 </p>
