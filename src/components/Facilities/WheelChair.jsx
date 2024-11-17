@@ -44,9 +44,13 @@ const WheelChair = () => {
         </h1>
       </div>
 
+      {/* Category selection with accessible label */}
       <div className="mb-4">
-        <label className="mr-2">Select Category:</label>
+        <label htmlFor="category-select" className="mr-2 text-xl text-gray-800">
+          Select Category:
+        </label>
         <select
+          id="category-select" // Linking the label with the select input
           value={category}
           onChange={handleCategoryChange}
           className="border rounded px-2 py-1"
@@ -56,6 +60,7 @@ const WheelChair = () => {
         </select>
       </div>
 
+      {/* Wheelchair selection grid */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 w-full">
         {wheelchairs.map((wheelchair) => (
           <div

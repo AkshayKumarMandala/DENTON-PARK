@@ -24,56 +24,56 @@ const ServicesData = [
     title: "Rides",
     path: "/admin-rides",
     component: <Rides />,
-    icon: <SiReactos />,
+    icon: <SiReactos aria-label="Rides" />, // Add aria-label for accessibility
   },
   {
     id: 2,
     title: "Dining",
     path: "/admindining",
     component: <Dining />,
-    icon: <IoFastFoodOutline />,
+    icon: <IoFastFoodOutline aria-label="Dining" />, // Add aria-label for accessibility
   },
   {
     id: 3,
     title: "Vehicles",
     path: "/admin-vehicles",
     component: <AdminVehicles />,
-    icon: <FaCar />,
+    icon: <FaCar aria-label="Vehicles" />, // Add aria-label for accessibility
   },
   {
     id: 4,
     title: "Photographers",
     path: "/photographers",
     component: <AdminPhotographers />,
-    icon: <FaCamera />,
+    icon: <FaCamera aria-label="Photographers" />, // Add aria-label for accessibility
   },
   {
     id: 5,
     title: "Wheelchairs",
     path: "/admin-wheelchairs",
     component: <AdminWheelChair />,
-    icon: <FaWheelchair />,
+    icon: <FaWheelchair aria-label="Wheelchairs" />, // Add aria-label for accessibility
   },
   {
     id: 6,
     title: "Contact Us",
     path: "/contact-us",
     component: <AdminFeedback />,
-    icon: <BiSupport />,
+    icon: <BiSupport aria-label="Contact Us" />, // Add aria-label for accessibility
   },
   {
     id: 7,
     title: "Transactions",
     path: "/transactions",
     component: <Transactions />,
-    icon: <MdOutlinePayment />,
+    icon: <MdOutlinePayment aria-label="Transactions" />, // Add aria-label for accessibility
   },
   {
     id: 8,
     title: "Ticket Booking",
     path: "/ticket-booking",
     component: <TicketBooking />,
-    icon: <IoTicketSharp />,
+    icon: <IoTicketSharp aria-label="Ticket Booking" />, // Add aria-label for accessibility
   },
 ];
 
@@ -86,8 +86,11 @@ function Landing() {
         <div className="top flex text-4xl items-center justify-center bg-yellow-800 w-full h-[15vh]">
           ADMIN PORTAL
         </div>
-        <div className="maincomponent w-full h-[85vh] flex ">
-          <div className="left w-[25%] h-full flex flex-col overflow-y-auto overflow-x-hidden">
+        <div className="maincomponent w-full h-[85vh] flex">
+          <div
+            className="left w-[25%] h-full flex flex-col overflow-y-auto overflow-x-hidden"
+            tabIndex="0" // Make the div focusable for keyboard accessibility
+          >
             {ServicesData.map((service) => (
               <div
                 key={service.id}

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import SignageCard from "../SignageCard";
 import { CiSearch } from "react-icons/ci";
 
@@ -103,7 +102,10 @@ const Signage = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row">
-        <div className="left w-full lg:w-1/2 p-4 overflow-y-auto h-[60vh] lg:h-[90vh] bg-white rounded-lg shadow-md scrollbar-thin scrollbar-thumb-gray-800">
+        <div
+          className="left w-full lg:w-1/2 p-4 overflow-y-auto h-[60vh] lg:h-[90vh] bg-white rounded-lg shadow-md scrollbar-thin scrollbar-thumb-gray-800"
+          tabIndex="0" // Make this div focusable
+        >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {filteredSignages.map((signage) => (
               <SignageCard key={signage.id} signage={signage} />

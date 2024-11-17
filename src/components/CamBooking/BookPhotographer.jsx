@@ -116,24 +116,49 @@ const BookPhotographer = () => {
               <p className="text-gray-600">Price: ${photographer.price}</p>
               <p
                 className={`font-semibold ${
-                  photographer.available ? "text-green-600" : "text-red-600"
+                  photographer.available ? "text-green-800" : "text-red-800"
                 }`}
               >
                 Status: {photographer.available ? "Available" : "Not Available"}
               </p>
             </div>
+
             {photographer.available && (
               <div className="mt-4 w-full text-center">
-                <input
-                  type="date"
-                  onChange={(e) => setDate(e.target.value)}
-                  className="border rounded p-2 w-full mb-2"
-                />
-                <input
-                  type="time"
-                  onChange={(e) => setTimeSlot(e.target.value)}
-                  className="border rounded p-2 w-full"
-                />
+                <div className="mb-4">
+                  {/* Label for Date Input */}
+                  <label
+                    htmlFor={`date-${photographer.id}`}
+                    className="block text-gray-700 font-medium mb-2"
+                  >
+                    Choose a Date
+                  </label>
+                  <input
+                    id={`date-${photographer.id}`}
+                    type="date"
+                    onChange={(e) => setDate(e.target.value)}
+                    value={date}
+                    className="border rounded p-2 w-full mb-2"
+                  />
+                </div>
+
+                <div className="mb-4">
+                  {/* Label for Time Input */}
+                  <label
+                    htmlFor={`time-${photographer.id}`}
+                    className="block text-gray-700 font-medium mb-2"
+                  >
+                    Choose a Time Slot
+                  </label>
+                  <input
+                    id={`time-${photographer.id}`}
+                    type="time"
+                    onChange={(e) => setTimeSlot(e.target.value)}
+                    value={timeSlot}
+                    className="border rounded p-2 w-full"
+                  />
+                </div>
+
                 <button
                   onClick={() => bookSlot(photographer)}
                   className="bg-blue-800 text-white py-2 px-4 rounded mt-4 hover:bg-blue-600 w-full"

@@ -70,12 +70,20 @@ const DealCalendar = () => {
   return (
     <div className="calendar-container">
       <div className="calendar-header">
-        <button onClick={handlePreviousMonth} className="nav-button">
+        <button
+          onClick={handlePreviousMonth}
+          className="nav-button"
+          aria-label="Previous Month"
+        >
           <FontAwesomeIcon icon={faChevronLeft} />
           <span className="hidden">Left</span>
         </button>
         <h2>{currentMonth.name}</h2>
-        <button onClick={handleNextMonth} className="nav-button">
+        <button
+          onClick={handleNextMonth}
+          className="nav-button"
+          aria-label="Next Month"
+        >
           <FontAwesomeIcon icon={faChevronRight} />
           <span className="hidden">Right</span>
         </button>
@@ -93,6 +101,9 @@ const DealCalendar = () => {
               deals[day + 1] ? { backgroundColor: deals[day + 1].color } : {}
             }
             onClick={() => handleDayClick(day + 1)}
+            aria-label={`Day ${day + 1}${
+              deals[day + 1] ? `: ${deals[day + 1].text}` : ""
+            }`}
           >
             {day + 1}
             {day + 1 === currentDay && <div className="today-indicator" />}

@@ -29,7 +29,7 @@ const Banner = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold !leading-snug text-gray-800"
+              className="text-3xl md:text-4xl font-bold !leading-snug text-black"
             >
               Experience Thrilling Rides and Endless Fun!
             </motion.h1>

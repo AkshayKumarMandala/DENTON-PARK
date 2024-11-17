@@ -8,8 +8,8 @@ const SignageCard = ({ signage }) => {
         alt={signage.name}
         className="w-full h-32 object-contain rounded-md"
       />
-      <h3 className="font-bold text-lg mt-2 text-white">{signage.name}</h3>
-      <p className="text-white">{signage.description}</p>
+      <h3 className="font-bold text-lg mt-2 text-black">{signage.name}</h3>
+      <p className="text-black">{signage.description}</p>
     </div>
   );
 };
