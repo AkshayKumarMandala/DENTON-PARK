@@ -104,7 +104,7 @@ const Menu = () => {
           className={`p-2 rounded ${
             selectedRestaurant === "oliveGreen"
               ? "bg-green-800 text-white"
-              : "bg-gray-800"
+              : "bg-green-800 text-white"
           }`}
         >
           Olive & Green
@@ -114,7 +114,7 @@ const Menu = () => {
           className={`p-2 rounded ${
             selectedRestaurant === "tasteOfIndia"
               ? "bg-green-800 text-white"
-              : "bg-gray-800"
+              : "bg-green-800 text-white"
           }`}
         >
           Taste of India
@@ -124,7 +124,7 @@ const Menu = () => {
           className={`p-2 rounded ${
             selectedRestaurant === "phothin"
               ? "bg-green-800 text-white"
-              : "bg-gray-800"
+              : "bg-green-800 text-white"
           }`}
         >
           Phothin
