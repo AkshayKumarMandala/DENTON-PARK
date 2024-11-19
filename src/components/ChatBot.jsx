@@ -17,13 +17,17 @@ const generationConfig = {
   responseMimeType: "text/plain",
 };
 
-
 const faqs = {
-  "what are the available rides?": "We offer various rides, including water rides, high rides, kids' rides, and land rides.",
-  "how can i book a ticket?": "You can book tickets through our booking page by selecting your desired ride and the number of tickets.",
-  "what facilities are available?": "We provide several facilities, including camera booking, wheelchair services, and screen reader support.",
-  "what are the dining options?": "We have multiple dining options available for our visitors, including snacks and meals.",
-  "how can i contact support?": "You can contact support via the 'Contact Us' section on our website.",
+  "what are the available rides?":
+    "We offer various rides, including water rides, high rides, kids' rides, and land rides.",
+  "how can i book a ticket?":
+    "You can book tickets through our booking page by selecting your desired ride and the number of tickets.",
+  "what facilities are available?":
+    "We provide several facilities, including camera booking, wheelchair services, and screen reader support.",
+  "what are the dining options?":
+    "We have multiple dining options available for our visitors, including snacks and meals.",
+  "how can i contact support?":
+    "You can contact support via the 'Contact Us' section on our website.",
 };
 
 const Chatbot = () => {
@@ -35,7 +39,6 @@ const Chatbot = () => {
 
     const userMessage = { text: message, sender: "user" };
     setChatHistory((prev) => [...prev, userMessage]);
-
 
     const response = faqs[message.trim().toLowerCase()];
     if (response) {
@@ -63,7 +66,10 @@ const Chatbot = () => {
       setMessage("");
     } catch (error) {
       console.error("Error occurred:", error);
-      const errorMessage = { text: "Sorry, there was an error.", sender: "bot" };
+      const errorMessage = {
+        text: "Sorry, there was an error.",
+        sender: "bot",
+      };
       setChatHistory((prev) => [...prev, errorMessage]);
     }
   };
@@ -71,24 +77,21 @@ const Chatbot = () => {
   return (
     <>
       <div className="main flex flex-col">
-
-
-        <div className="title justify-center items-center flex h-[15vh] bg-black text-yellow-400">
-          <h1 className="text-4xl flex items-center">Meet the HAYYIN Chatbot <FaRobot className="mx-5 text-4xl font-extrabold"/>   </h1>
+        <div className="title justify-center items-center flex h-[15vh] bg-black text-yellow-800">
+          <h1 className="text-4xl flex items-center">
+            Meet the HAYYIN Chatbot{" "}
+            <FaRobot className="mx-5 text-4xl font-extrabold" />{" "}
+          </h1>
         </div>
-
-
-
-
       </div>
 
-
-      <div className="bg-yellow-400 h-[100vh] flex items-center justify-around">
-
-
-        <div className="app-container " style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+      <div className="bg-yellow-800 h-[100vh] flex items-center justify-around">
+        <div
+          className="app-container "
+          style={{ display: "flex", justifyContent: "center", gap: "20px" }}
+        >
           <div className="chat-container bg-black ">
-            <div className="chat-history bg-gray-400">
+            <div className="chat-history bg-gray-800">
               {chatHistory.map((chat, index) => (
                 <div key={index} className={`chat-message ${chat.sender}`}>
                   <strong>{chat.sender === "user" ? "You: " : "Bot: "}</strong>
@@ -97,31 +100,40 @@ const Chatbot = () => {
               ))}
             </div>
             <div className="chat-input bg-black">
+              <label htmlFor="chatMessage" className="text-white">
+                Type your message
+              </label>
               <input
+                id="chatMessage"
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Type your message..."
-                className=" bg-slate-900 text-gray-400"
+                className="bg-slate-900 text-white" // Changed text-gray-800 to text-white for better contrast
               />
-              <button className="bg-yellow-400 text-black tex" onClick={handleSendMessage}>Send</button>
+              <button
+                className="bg-black text-white" // This should already have good contrast
+                onClick={handleSendMessage}
+              >
+                Send
+              </button>
             </div>
           </div>
 
           <div className="faq-container bg-black">
-            <div className="faq-header text-gray-300">Frequently Asked Questions</div>
+            <div className="faq-header text-white">
+              Frequently Asked Questions
+            </div>
             <ul className="faq-list  h-[80%]">
               {Object.keys(faqs).map((faq, index) => (
-                <li key={index} className="faq-item bg-slate-900 text-gray-400">
+                <li key={index} className="faq-item bg-slate-900 text-white">
                   {faq.charAt(0).toUpperCase() + faq.slice(1)}
                 </li>
               ))}
             </ul>
           </div>
         </div>
-
       </div>
-
     </>
   );
 };

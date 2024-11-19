@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { db } from "../firebase"; 
-import { collection, getDocs } from "firebase/firestore"; 
+import { db } from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 const SlideUp = (delay) => {
   return {
@@ -21,53 +21,88 @@ const SlideUp = (delay) => {
   };
 };
 
-const DynamicView = ({ heading, collectionName, pricing=false }) => { 
-  const [servicesData, setServicesData] = useState([]); 
+const DynamicView = ({ heading, collectionName, pricing = false }) => {
+  const [servicesData, setServicesData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchServices = async () => {
-      const servicesCollection = collection(db, collectionName);
-      const servicesSnapshot = await getDocs(servicesCollection);
-      const servicesList = servicesSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setServicesData(servicesList);
+      try {
+        const servicesCollection = collection(db, collectionName);
+        const servicesSnapshot = await getDocs(servicesCollection);
+        const servicesList = servicesSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setServicesData(servicesList);
+      } catch (err) {
+        setError("Error fetching data. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchServices();
-  }, [collectionName]); 
+  }, [collectionName]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-red-800">{error}</p>
+      </div>
+    );
+  }
 
   return (
     <section className="bg-white">
       <div className="container pb-14 pt-16">
         <h1 className="text-4xl font-bold text-left pb-10">{heading}</h1>
         <div className="flex flex-col gap-8">
-          {servicesData.map((service, index) => (
-            <motion.div
-              key={service.id}
-              variants={SlideUp(0.1 * index)}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="bg-[#f4f4f4] rounded-2xl flex p-4 py-7 hover:bg-white hover:scale-105 duration-300 hover:shadow-2xl"
-            >
-              <div className="flex items-start">
-                <div className="flex flex-col flex-shrink-0 mr-4">
-                  <h1 className="text-lg font-semibold">{service.title}</h1>
-                  <img style={{ placeSelf: "center" }} src={service.image} alt={service.title} className="w-16 h-16 mt-2" />
+          {servicesData.length === 0 ? (
+            <p className="text-center text-xl">No services available.</p>
+          ) : (
+            servicesData.map((service, index) => (
+              <motion.div
+                key={service.id}
+                variants={SlideUp(0.1 * index)}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                className="bg-[#f4f4f4] rounded-2xl flex p-4 py-7 hover:bg-white hover:scale-105 duration-800 hover:shadow-2xl"
+              >
+                <div className="flex items-start">
+                  <div className="flex flex-col flex-shrink-0 mr-4">
+                    <h1 className="text-lg font-semibold">{service.title}</h1>
+                    <img
+                      style={{ placeSelf: "center" }}
+                      src={service.image}
+                      alt={service.title}
+                      className="w-16 h-16 mt-2"
+                    />
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-sm mt-4 mr-4">{service.description}</p>
+                  </div>
                 </div>
-                <div className="flex-grow">
-                  <p className="text-sm mt-4 mr-4">{service.description}</p>
-                </div>
-              </div>
-              {pricing && (
-              <div className="flex-shrink-0 text-right ml-auto mt-auto">
-                <p className="text-lg font-semibold">Price: {service.pricing}</p>
-              </div>
-              )}
-            </motion.div>
-          ))}
+                {pricing && (
+                  <div className="flex-shrink-0 text-right ml-auto mt-auto">
+                    <p className="text-lg font-semibold">
+                      Price: {service.pricing}
+                    </p>
+                  </div>
+                )}
+              </motion.div>
+            ))
+          )}
         </div>
       </div>
     </section>

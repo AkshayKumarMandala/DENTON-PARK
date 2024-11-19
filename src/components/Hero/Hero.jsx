@@ -3,8 +3,9 @@ import Navbar from "../Navbar/Navbar";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Blob from "../../assets/blob.svg";
 import aPark from "../../assets/aPark.jpg";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
+// Animation helper function for fade-up effect
 export const FadeUp = (delay) => {
   return {
     initial: {
@@ -38,8 +39,8 @@ const Hero = () => {
               animate="animate"
               className="text-3xl lg:text-5xl font-bold !leading-snug"
             >
-              Unleash Adventure & Fun Your  {" "}
-              <span className="text-secondary">Ultimate</span> Amusement Destination
+              Unleash Adventure & Fun Your{" "}
+              <span className="text-black">Ultimate</span> Amusement Destination
             </motion.h1>
             <motion.div
               variants={FadeUp(0.8)}
@@ -47,9 +48,15 @@ const Hero = () => {
               animate="animate"
               className="flex justify-center md:justify-start"
             >
-              <button onClick={()=>{window.location.href="/bookings"}}className="primary-btn flex items-center gap-2 group">
+              <button
+                onClick={() => {
+                  window.location.href = "/bookings";
+                }}
+                className="primary-btn flex items-center gap-2 group bg-black text-white"
+                aria-label="Book Entry Tickets"
+              >
                 Book Entry Tickets
-                <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-300" />
+                <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-800" />
               </button>
             </motion.div>
           </div>
@@ -60,17 +67,17 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
             src={aPark}
-            alt=""
+            alt="A beautiful view of the amusement park with rides and attractions"
             className="w-[400px] xl:w-[600px] relative z-10 drop-shadow"
-            style={{borderRadius:"50%"}}
+            style={{ borderRadius: "50%" }}
           />
           <motion.img
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
             src={Blob}
-            alt=""
-            className="absolute -bottom-32 w-[800px] md:w-[1500px] z-[1] hidden md:block"
+            alt="Abstract background element with fluid design"
+            className="absolute -bottom-32 w-[800px] md:w-[1800px] z-[1] hidden md:block"
           />
         </div>
       </div>
