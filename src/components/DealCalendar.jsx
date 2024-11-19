@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCandyCane,
-  faStar,
-  faSatellite,
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCandyCane, faStar, faSatellite, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "./DealCalendar.css";
 import { Link } from "react-router-dom";
+
 
 const DealCalendar = () => {
   const months = [
     { name: "January", days: 31 },
-    { name: "February", days: 28 },
+    { name: "February", days: 28 }, 
     { name: "March", days: 31 },
     { name: "April", days: 30 },
     { name: "May", days: 31 },
@@ -27,24 +22,14 @@ const DealCalendar = () => {
   ];
 
   const deals = {
-    2: {
-      icon: faCandyCane,
-      color: "pink",
-      text: "Free Cotton Candy for every ticket!",
-    },
-    5: { icon: faSatellite, color: "pink", text: "Free Roller Coaster Ride!" },
+    2: { icon: faCandyCane, color: "pink", text: "Free Cotton Candy for every ticket!" },
+    5: { icon: faSatellite, color: "blue", text: "Free Roller Coaster Ride!" },
     12: { icon: faCandyCane, color: "pink", text: "Cotton Candy Day!" },
     18: { icon: faStar, color: "yellow", text: "Star Attraction Discount!" },
-    25: {
-      icon: faSatellite,
-      color: "pink",
-      text: "Special Event: Roller Coaster Festival!",
-    },
+    25: { icon: faSatellite, color: "blue", text: "Special Event: Roller Coaster Festival!" },
   };
 
-  const [currentMonthIndex, setCurrentMonthIndex] = useState(
-    new Date().getMonth()
-  );
+  const [currentMonthIndex, setCurrentMonthIndex] = useState(new Date().getMonth());
   const [selectedDeal, setSelectedDeal] = useState("");
 
   const currentDay = new Date().getDate();
@@ -70,22 +55,12 @@ const DealCalendar = () => {
   return (
     <div className="calendar-container">
       <div className="calendar-header">
-        <button
-          onClick={handlePreviousMonth}
-          className="nav-button"
-          aria-label="Previous Month"
-        >
+        <button onClick={handlePreviousMonth} className="nav-button">
           <FontAwesomeIcon icon={faChevronLeft} />
-          <span className="hidden">Left</span>
         </button>
         <h2>{currentMonth.name}</h2>
-        <button
-          onClick={handleNextMonth}
-          className="nav-button"
-          aria-label="Next Month"
-        >
+        <button onClick={handleNextMonth} className="nav-button">
           <FontAwesomeIcon icon={faChevronRight} />
-          <span className="hidden">Right</span>
         </button>
       </div>
       <div className="deal-details">
@@ -97,27 +72,24 @@ const DealCalendar = () => {
           <div
             key={day + 1}
             className={`day ${deals[day + 1] ? "has-deal" : ""}`}
-            style={
-              deals[day + 1] ? { backgroundColor: deals[day + 1].color } : {}
-            }
+            style={deals[day + 1] ? { backgroundColor: deals[day + 1].color } : {}}
             onClick={() => handleDayClick(day + 1)}
-            aria-label={`Day ${day + 1}${
-              deals[day + 1] ? `: ${deals[day + 1].text}` : ""
-            }`}
           >
             {day + 1}
-            {day + 1 === currentDay && <div className="today-indicator" />}
-            {deals[day + 1] && <FontAwesomeIcon icon={deals[day + 1].icon} />}
+            {day + 1 === currentDay && <div className="today-indicator" />} {}
+            {deals[day + 1] && (
+              <FontAwesomeIcon icon={deals[day + 1].icon} />
+            )}
           </div>
         ))}
       </div>
       {selectedDeal && (
-        <Link to="/rides">
-          <div className="deal-details">
-            <h3>Deal of the Day:</h3>
-            <p>{selectedDeal}</p>
-          </div>
-        </Link>
+       <Link to='/rides'>
+
+        <div className="deal-details">
+          <h3>Deal of the Day:</h3>
+          <p>{selectedDeal}</p>
+        </div></Link>
       )}
     </div>
   );

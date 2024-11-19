@@ -19,7 +19,7 @@ const Banner = () => {
             src={aPark}
             alt=""
             className="w-[350px] md:max-w-[450px] object-cover drop-shadow"
-            style={{ borderRadius: "50%" }}
+            style={{borderRadius:"50%"}}
           />
         </div>
         <div className="flex flex-col justify-center">
@@ -29,9 +29,9 @@ const Banner = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold !leading-snug text-black"
+              className="text-3xl md:text-4xl font-bold !leading-snug"
             >
-              Experience Thrilling Rides and Endless Fun!
+               Experience Thrilling Rides and Endless Fun!
             </motion.h1>
             <div className="flex flex-col gap-6">
               <motion.div
@@ -39,7 +39,7 @@ const Banner = () => {
                 initial="initial"
                 whileInView={"animate"}
                 viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-800 hover:shadow-2xl"
+                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
               >
                 <GiWaterPolo className="text-2xl" />
                 <p className="text-lg">60+ Rides</p>
@@ -49,7 +49,7 @@ const Banner = () => {
                 initial="initial"
                 whileInView={"animate"}
                 viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-800 hover:shadow-2xl"
+                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
               >
                 <GrUserExpert className="text-2xl" />
                 <p className="text-lg">PWD Friendly</p>
@@ -59,7 +59,7 @@ const Banner = () => {
                 initial="initial"
                 whileInView={"animate"}
                 viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-800 hover:shadow-2xl"
+                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
               >
                 <MdOutlineAccessTime className="text-2xl" />
                 <p className="text-lg">8 Hours per day</p>

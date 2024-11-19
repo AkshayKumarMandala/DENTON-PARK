@@ -14,49 +14,49 @@ const ServicesData = [
     id: 1,
     title: "Rides",
     link: "/rides",
-    icon: <SiReactos aria-label="Rides Icon" />,
+    icon: <SiReactos />,
     delay: 0.2,
   },
   {
     id: 2,
     title: "Dining",
     link: "/dining",
-    icon: <IoFastFoodOutline aria-label="Dining Icon" />,
+    icon: <IoFastFoodOutline />,
     delay: 0.3,
   },
   {
     id: 3,
     title: "Facilities",
     link: "/facilities",
-    icon: <MdLocalActivity aria-label="Facilities Icon" />,
+    icon: <MdLocalActivity />,
     delay: 0.4,
   },
   {
     id: 4,
     title: "Clear Signage",
     link: "/clearSignage",
-    icon: <CiSignpostDuo1 aria-label="Clear Signage Icon" />,
+    icon: <CiSignpostDuo1 />,
     delay: 0.5,
   },
   {
     id: 5,
     title: "Chat With Us",
     link: "/chat",
-    icon: <IoMdHappy aria-label="Chat With Us Icon" />,
+    icon: <IoMdHappy />,
     delay: 0.6,
   },
   {
     id: 6,
     title: "Contact Us",
     link: "/contactus",
-    icon: <BiSupport aria-label="Contact Us Icon" />,
+    icon: <BiSupport />,
     delay: 0.7,
   },
   {
-    id: 7, // Fixed duplicate id
+    id: 6,
     title: "Cart Page",
     link: "/cartpage",
-    icon: <IoCartOutline aria-label="Cart Page Icon" />,
+    icon: <IoCartOutline />,
     delay: 0.7,
   },
 ];
@@ -86,7 +86,7 @@ const Services = () => {
         <h1 className="text-4xl font-bold text-left pb-10">
           Explore DENTON Now!
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
           {ServicesData.map((service) => (
             <Link to={service.link} key={service.id}>
               <motion.div
@@ -94,12 +94,10 @@ const Services = () => {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] rounded-2xl flex flex-col items-center justify-center p-4 py-7 hover:bg-white hover:scale-110 duration-500 hover:shadow-2xl h-full"
+                className="bg-[#f4f4f4] rounded-2xl flex flex-col items-center justify-center p-4 py-7 hover:bg-white hover:scale-110 duration-300 hover:shadow-2xl h-full" // Set height to full
               >
-                <div className="text-4xl sm:text-5xl md:text-6xl mb-4">
-                  {service.icon}
-                </div>
-                <h1 className="text-lg font-semibold text-center px-3">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h1 className="text-lg font-semibold text-center px-3 flex-grow"> {/* Added flex-grow */}
                   {service.title}
                 </h1>
               </motion.div>

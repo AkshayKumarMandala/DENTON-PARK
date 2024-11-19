@@ -13,7 +13,7 @@ const DynamicForm = ({
   placeholders = {},
   columns = 2,
   inputWidth = 50,
-  validationRules = {},
+  validationRules = {}, 
   borderColour,
 }) => {
   const [passwordVisibility, setPasswordVisibility] = useState({});
@@ -69,7 +69,6 @@ const DynamicForm = ({
         return (
           <div key={index}>
             <label
-              htmlFor={key}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -78,55 +77,52 @@ const DynamicForm = ({
             >
               {label}
             </label>
-            <>
-              <input
-                id={key}
-                style={{
-                  border: borderColour,
-                  backgroundColor:
-                    (isTextDisabled && disabled) || disabled
-                      ? "#e6e6e6"
-                      : isTextDisabled
-                      ? "#f2f2f2"
-                      : "#ffffff",
-                }}
-                type={
-                  isTextDisabled
-                    ? "text"
-                    : passwordVisibility[key]
-                    ? "text"
-                    : inputType
-                }
-                value={value}
-                onChange={(e) => onChange(e.target.value)}
-                placeholder={placeholder}
-                disabled={disabled || isTextDisabled}
-                min={inputType === "date" ? minDate : undefined}
-                max={inputType === "date" ? maxDate : undefined}
-                autoComplete={
-                  inputType === "email"
-                    ? "email"
-                    : inputType === "password"
-                    ? "new-password"
-                    : undefined
-                }
-              />
-              {inputType === "password" && (
-                <span
-                  className={Styles.togglePassword}
-                  onClick={() => togglePasswordVisibility(key)}
-                >
-                  <span style={{ fontSize: "2.5vh", color: "#633172" }}>
-                    {passwordVisibility[key] ? (
-                      <em className="ri-eye-close-line"></em>
-                    ) : (
-                      <em className="ri-eye-line"></em>
-                    )}
-                  </span>
-                </span>
-              )}
+              <>
+                  <input
+                    style={{
+                      border: borderColour,
+                      backgroundColor:
+                        (isTextDisabled && disabled) || disabled
+                          ? "#e6e6e6"
+                          : isTextDisabled
+                          ? "#f2f2f2"
+                          : "#ffffff",
+                    }}
+                    type={
+                      isTextDisabled
+                        ? "text"
+                        : passwordVisibility[key]
+                        ? "text"
+                        : inputType
+                    }
+                    value={value}
+                    onChange={(e) => onChange(e.target.value)}
+                    placeholder={placeholder}
+                    disabled={disabled || isTextDisabled}
+                    min={inputType === "date" ? minDate : undefined}
+                    max={inputType === "date" ? maxDate : undefined}
+                    autoComplete={
+                      inputType === "email"
+                        ? "email"
+                        : inputType === "password"
+                        ? "new-password"
+                        : undefined
+                    } 
+                  />
+                  {inputType === "password" && (
+  <span
+    className={Styles.togglePassword}
+    onClick={() => togglePasswordVisibility(key)}>
+    <span
+      style={{ fontSize: "2.5vh", color:"#633172" }}>
+      {passwordVisibility[key]
+        ? <i className="ri-eye-close-line"></i>
+        : <i className="ri-eye-line"></i>}
+    </span>
+  </span>
+)}
 
-              {/* {inputType === "password" && (
+                {/* {inputType === "password" && (
                   <span
                     className={Styles.togglePassword}
                     onClick={() => togglePasswordVisibility(key)}>
@@ -139,7 +135,7 @@ const DynamicForm = ({
                     </span>
                   </span>
                 )} */}
-            </>
+              </>
           </div>
         );
       })}

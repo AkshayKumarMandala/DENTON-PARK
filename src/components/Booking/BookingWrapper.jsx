@@ -27,8 +27,7 @@ export const FadeUp = (delay) => {
 
 const Hero = () => {
   const [user, setUser] = useState(null); // State for user
-  const [loggedInThroughLoginPage, setLoggedInThroughLoginPage] =
-    useState(false); // State for login page status
+  const [loggedInThroughLoginPage, setLoggedInThroughLoginPage] = useState(false); // State for login page status
 
   return (
     <section className="bg-light overflow-hidden relative">
@@ -43,7 +42,7 @@ const Hero = () => {
             src={aPark}
             alt="Amusement Park"
             className="w-[400px] xl:w-[600px] relative z-10 drop-shadow"
-            style={{ borderRadius: "50%", width: "35vw" }}
+            style={{ borderRadius: "50%", width:"35vw" }}
           />
           <motion.img
             initial={{ x: 50, opacity: 0 }}
@@ -51,7 +50,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
             src={Blob}
             alt="Decorative Blob"
-            className="absolute -bottom-32 w-[800px] md:w-[1800px] z-[1] hidden md:block"
+            className="absolute -bottom-32 w-[800px] md:w-[1500px] z-[1] hidden md:block"
           />
         </div>
 
